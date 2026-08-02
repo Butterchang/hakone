@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>上海7人旅 2026.8.3–8.6｜シャンハイ旅のしおり</title>
+<meta name="description" content="2026年8月3日〜6日・上海7人旅のしおり。行程・グルメ・ガイド・天気を1ページに。中文／日本語切替対応。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="上海7人旅 2026.8.3–8.6｜シャンハイ旅のしおり">
+<meta property="og:description" content="行程・グルメ・ガイド・天気を1ページに。中文／日本語切替対応。">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2E5C8A">
+<!-- 中国大陆可访问的 CDN（BootCDN），失败时自动回退到 cdnjs -->
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+      onerror="this.onerror=null;this.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css'"/>
+<script src="https://cdn.bootcdn.net/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>window.L||document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"><\/script>')</script>
+<!-- Google Fonts 在中国大陆无法载入，字型已设定系统备援，不影响阅读 -->
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fuji:#4A7FB5; --fuji-deep:#2E5C8A; --snow:#FAFAF8; --warm:#6B6560; --warm-l:#A09A90;
+  --food:#E8A13C; --spot:#C0563F; --act:#5B9E7D; --shop:#8B7BB5; --trans:#7A8CA0; --hotel:#D08770;
+  --card:#FFFFFF; --line:#ECE8E2; --r:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Zen Maru Gothic','Noto Sans SC','PingFang SC','Hiragino Sans','Microsoft YaHei','Heiti SC',system-ui,sans-serif;background:var(--snow);color:#3A3733;-webkit-font-smoothing:antialiased;padding-bottom:92px}
+/* ---- 語言切換 ---- */
+body.lang-zh .ja{display:none!important}
+body.lang-ja .zh{display:none!important}
+.yomi{display:block;font-size:10px;color:var(--fuji);background:#EDF3FA;border-radius:6px;padding:2px 7px;margin-top:3px;font-weight:500;width:fit-content;line-height:1.5}
+body.lang-zh .yomi{display:none}
+/* ---- Header 青海波 ---- */
+.hd{position:sticky;top:0;z-index:1100;color:#fff;padding:14px 16px 12px;
+  background:var(--fuji-deep);
+  background-image:radial-gradient(circle at 50% 130%, rgba(255,255,255,.16) 18%, transparent 19%),radial-gradient(circle at 0% 130%, rgba(255,255,255,.16) 18%, transparent 19%),radial-gradient(circle at 100% 130%, rgba(255,255,255,.16) 18%, transparent 19%),linear-gradient(150deg,#35689C,#2E5C8A);
+  background-size:56px 34px,56px 34px,56px 34px,100% 100%;
+  box-shadow:0 2px 10px rgba(46,92,138,.28)}
+.hd .row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.hd h1{font-size:17px;font-weight:900;letter-spacing:.5px}
+.hd .date{font-size:11px;opacity:.9;margin-top:2px;font-weight:500}
+.lang-sw{display:flex;background:rgba(255,255,255,.18);border-radius:99px;padding:3px;flex-shrink:0}
+.lang-sw button{border:0;background:transparent;color:#fff;font-family:inherit;font-size:11.5px;font-weight:700;padding:5px 12px;border-radius:99px;opacity:.75}
+.lang-sw button.on{background:#fff;color:var(--fuji-deep);opacity:1}
+/* ---- 底部浮動導覽 ---- */
+.nav{position:fixed;left:50%;transform:translateX(-50%);bottom:14px;z-index:1200;display:flex;gap:2px;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:24px;padding:7px;box-shadow:0 6px 24px rgba(46,92,138,.18)}
+.nav button{border:0;background:transparent;font-family:inherit;color:var(--warm-l);font-size:10.5px;font-weight:700;padding:7px 13px;border-radius:17px;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:62px}
+.nav button .ic{width:20px;height:20px;display:flex;align-items:center;justify-content:center}
+.nav button .ic svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;display:block}
+.nav button.on{background:var(--fuji);color:#fff}
+/* ---- 佈局 ---- */
+.wrap{max-width:640px;margin:0 auto;padding:14px}
+.tab{display:none}.tab.on{display:block}
+h2{font-size:14.5px;font-weight:900;margin:18px 0 10px;display:flex;align-items:center;gap:8px;color:var(--fuji-deep)}
+h2::before{content:"";width:5px;height:18px;border-radius:3px;background:var(--fuji)}
+#map{width:100%;height:44vh;min-height:280px;border-radius:var(--r);border:1px solid var(--line);z-index:1}
+/* ---- 日切換 chips ---- */
+.days{display:flex;gap:8px;overflow-x:auto;padding:12px 2px 4px;-webkit-overflow-scrolling:touch}
+.days::-webkit-scrollbar{display:none}
+.day-chip{flex-shrink:0;border:1.5px solid var(--line);background:#fff;border-radius:16px;padding:8px 14px;font-family:inherit;text-align:center;color:var(--warm)}
+.day-chip b{display:block;font-size:13px;font-weight:900}
+.day-chip span{font-size:9.5px;font-weight:500}
+.day-chip.on{background:var(--fuji);color:#fff;border-color:var(--fuji)}
+.rt-pane{display:none}
+.rt-pane.on{display:block}
+.rt-lead{background:#F1F4F8;border-radius:14px;padding:11px 13px;font-size:11px;color:var(--warm);line-height:1.9;margin:12px 0 4px}
+.rt-sum{background:linear-gradient(135deg,#EEF4FA,#E3EDF6);border-left:3px solid var(--fuji);border-radius:0 12px 12px 0;padding:11px 13px;font-size:11px;color:var(--warm);line-height:1.9;margin:14px 0 4px}
+.rt-sum b{color:var(--fuji);font-size:12px}
+.day-chip.on{background:var(--fuji);border-color:var(--fuji);color:#fff;box-shadow:0 3px 10px rgba(74,127,181,.35)}
+.day-pane{display:none}.day-pane.on{display:block;animation:fi .25s ease}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* ---- 天氣穿著提示 ---- */
+.wear{background:linear-gradient(135deg,#FDF6EC,#EDF3FA);border:1px solid #F0E6D6;border-radius:var(--r);padding:12px 14px;font-size:11.5px;line-height:1.75;color:#7A6A4F;margin:10px 0}
+.wear b{color:#B5822E;font-size:12px}
+/* ---- 分組欄 ---- */
+.grp{border-radius:var(--r);padding:10px 14px;margin:14px 0 8px;font-size:12.5px;font-weight:900;color:#fff;display:flex;align-items:center;gap:8px}
+.grp small{font-weight:500;font-size:10px;opacity:.9}
+/* ---- 景點卡片 ---- */
+.spot{background:var(--card);border-radius:var(--r);overflow:hidden;margin-bottom:14px;box-shadow:0 2px 10px rgba(58,55,51,.06);border:1px solid var(--line)}
+.spot .ph{position:relative;height:170px}
+.spot .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.spot .ph .grad{width:100%;height:100%;display:none;align-items:center;justify-content:center;font-size:52px}
+.spot .ph .t-time{position:absolute;top:10px;left:10px;background:rgba(46,92,138,.88);color:#fff;font-size:10.5px;font-weight:700;border-radius:8px;padding:3px 9px;backdrop-filter:blur(4px)}
+.spot .bd{padding:13px 14px 14px}
+.spot h3{font-size:14.5px;font-weight:900;line-height:1.4}
+.cat{display:inline-block;font-size:9px;color:#fff;border-radius:6px;padding:2px 8px;font-weight:700;vertical-align:2px;margin-right:6px}
+.badges{margin:7px 0 2px;display:flex;gap:5px;flex-wrap:wrap}
+.bdg{font-size:9.5px;font-weight:700;border-radius:99px;padding:2.5px 9px;border:1.2px solid}
+.b-eat{color:#C0563F;border-color:#EFC7BC;background:#FBF1EE}
+.b-buy{color:#8B7BB5;border-color:#DCD4EC;background:#F6F3FB}
+.b-photo{color:#3D7FA6;border-color:#C2DCEA;background:#EEF6FB}
+.desc{font-size:11.5px;color:var(--warm);line-height:1.8;margin-top:6px}
+.meta{font-size:10.5px;color:var(--warm-l);margin-top:8px;display:flex;gap:10px;flex-wrap:wrap;line-height:1.6}
+.tip{background:#FDF9F0;border-left:3px solid var(--food);border-radius:0 10px 10px 0;padding:8px 10px;font-size:10.5px;color:#8A7146;line-height:1.7;margin-top:9px}
+.trans-note{background:#F1F4F8;border-radius:10px;padding:8px 10px;font-size:10.5px;color:var(--trans);line-height:1.7;margin-top:9px}
+.btns{display:flex;gap:8px;margin-top:11px}
+.btn{flex:1;text-align:center;text-decoration:none;font-size:11px;font-weight:700;border-radius:12px;padding:9px 4px;font-family:inherit;border:0}
+.btn-g{background:var(--fuji);color:#fff}
+.btn-a{background:#fff;color:var(--fuji);border:1.5px solid var(--fuji)}
+/* ---- 旅記照片 ---- */
+.memo{margin-top:11px;border-top:1px dashed var(--line);padding-top:10px}
+.memo label{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;color:var(--act);background:#EFF7F2;border:1.2px dashed #A9CDBA;border-radius:10px;padding:7px 12px;cursor:pointer}
+.memo input{display:none}
+.memo .strip{display:flex;gap:6px;overflow-x:auto;margin-top:8px}
+.memo .strip img{width:64px;height:64px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+/* ---- 美食卡片 ---- */
+.food{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:10px;box-shadow:0 1px 5px rgba(58,55,51,.05)}
+.food .in{display:flex}
+.food .fim{width:106px;flex-shrink:0;position:relative}
+.food .fim img{width:106px;height:100%;min-height:118px;object-fit:cover;display:block}
+.food .fim .grad{width:106px;height:100%;min-height:118px;display:none;align-items:center;justify-content:center;font-size:34px}
+.food .fb{padding:10px 12px;flex:1;min-width:0}
+.food h4{font-size:12.5px;font-weight:900;line-height:1.45}
+.stars{color:var(--food);font-size:10px;font-weight:700;white-space:nowrap}
+.menu{font-size:11px;color:#B5822E;font-weight:700;margin:4px 0 2px;line-height:1.6}
+.food .desc{font-size:10.5px;margin-top:2px}
+.rv{font-size:9.5px;color:var(--warm-l);margin-top:6px;padding-top:6px;border-top:1px solid #F3F0EB;line-height:1.6;font-style:italic}
+.rv::before{content:"💬 ";font-style:normal}
+.food .fbtn{display:flex;gap:6px;padding:0 12px 10px 12px}
+.food .fbtn a{flex:1;text-align:center;text-decoration:none;font-size:10px;font-weight:700;border-radius:9px;padding:6px 2px}
+/* ---- 指南 ---- */
+.gcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px;margin-bottom:12px}
+.gcard h3{font-size:13px;font-weight:900;color:var(--fuji-deep);display:flex;align-items:center;gap:7px;margin-bottom:9px}
+.pk-cat{margin-bottom:12px}
+.pk-cat .pkh{font-size:11.5px;font-weight:900;color:var(--warm);display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.pk-item{display:flex;align-items:center;gap:8px;background:var(--snow);border-radius:11px;padding:7px 10px;margin-bottom:5px;font-size:11.5px}
+.pk-item input[type=checkbox]{width:17px;height:17px;accent-color:var(--fuji)}
+.pk-item .nm{flex:1;font-weight:500}
+.pk-item .nm.done{text-decoration:line-through;color:var(--warm-l)}
+.qty{display:flex;align-items:center;gap:5px}
+.qty button{width:20px;height:20px;border-radius:7px;border:1px solid var(--line);background:#fff;font-size:12px;color:var(--fuji);font-family:inherit}
+.qty span{font-size:11px;font-weight:700;min-width:14px;text-align:center}
+.del{border:0;background:transparent;color:#D9A0A0;font-size:13px;padding:0 2px}
+.pk-add{display:flex;gap:6px;margin-top:6px}
+.pk-add input{flex:1;border:1.2px solid var(--line);border-radius:11px;padding:8px 11px;font-family:inherit;font-size:11.5px;background:#fff}
+.pk-add button{border:0;background:var(--fuji);color:#fff;border-radius:11px;padding:0 15px;font-family:inherit;font-size:12px;font-weight:700}
+.rule{display:flex;gap:9px;font-size:11.5px;line-height:1.75;color:var(--warm);margin-bottom:9px}
+.rule .ri{flex-shrink:0;font-size:15px}
+.trip{border:1px solid var(--line);border-radius:13px;padding:11px 12px;margin-bottom:10px}
+.trip .th{font-size:12px;font-weight:900;color:var(--fuji-deep);margin-bottom:8px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.trip .th .tag{font-size:9px;font-weight:800;color:#fff;border-radius:6px;padding:2px 7px}
+.opt{display:flex;gap:9px;font-size:11px;line-height:1.75;color:var(--warm);padding:7px 0;border-top:1px dashed var(--line)}
+.opt:first-of-type{border-top:0}
+.opt .oi{flex-shrink:0;font-size:14px;width:19px;text-align:center}
+.opt b{color:var(--fuji-deep)}
+.opt .num{display:inline-block;background:#EEF4FA;color:var(--fuji-deep);border-radius:5px;padding:0 5px;font-weight:800;font-size:10.5px;margin:0 1px}
+.best{background:linear-gradient(135deg,#EEF4FA,#E3EDF6);border-radius:8px;padding:6px 9px;font-size:10.5px;font-weight:700;color:var(--fuji-deep);margin-top:7px}
+.em{display:flex;align-items:center;justify-content:space-between;background:#FBF1EE;border-radius:12px;padding:10px 13px;margin-bottom:7px}
+.em .en{font-size:11.5px;font-weight:700;color:#8A4A3A}
+.em a{font-size:15px;font-weight:900;color:#C0563F;text-decoration:none}
+.fl{border:1.5px solid var(--line);border-radius:14px;padding:11px 13px;margin-bottom:8px}
+.fl .no{font-size:12.5px;font-weight:900;color:var(--fuji-deep)}
+.fl .rt{display:flex;align-items:center;gap:7px;font-size:11px;margin-top:5px;color:var(--warm);flex-wrap:wrap}
+.fl .st{background:var(--fuji);color:#fff;border-radius:6px;padding:1.5px 8px;font-weight:700;font-size:10.5px}
+.fl .ar{color:var(--warm-l)}
+.tbd{border-style:dashed;background:#FDF9F0}
+.link-save{display:flex;gap:6px;margin-top:8px}
+.link-save input{flex:1;border:1.2px solid var(--line);border-radius:10px;padding:7px 10px;font-size:10.5px;font-family:inherit}
+.link-save a,.link-save button{border:0;background:var(--fuji);color:#fff;border-radius:10px;padding:7px 12px;font-size:10.5px;font-weight:700;text-decoration:none;font-family:inherit}
+/* ---- 天氣 ---- */
+.wx-day{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:13px 15px;margin-bottom:9px;display:flex;align-items:center;gap:13px}
+.wx-day .ico{font-size:32px}
+.wx-day .wd{flex:1}
+.wx-day .dt{font-size:12px;font-weight:900;color:var(--fuji-deep)}
+.wx-day .tp{font-size:15px;font-weight:900;margin-top:2px}
+.wx-day .tp small{font-size:10.5px;color:var(--warm-l);font-weight:500}
+.wx-day .ex{font-size:10px;color:var(--warm);line-height:1.6;margin-top:2px}
+.wx-note{background:#EEF6FB;border:1px solid #C2DCEA;border-radius:var(--r);padding:12px 14px;font-size:11.5px;color:#3D6E93;line-height:1.8;margin:10px 0}
+.loading{text-align:center;font-size:11px;color:var(--warm-l);padding:14px}
+.foot{text-align:center;font-size:9.5px;color:var(--warm-l);padding:20px 0 8px;line-height:1.8}
+@media(max-width:400px){.spot .ph{height:150px}.food .fim,.food .fim img,.food .fim .grad{width:92px}}
+</style>
+</head>
+<body class="lang-zh">
+
+<div class="hd">
+  <div class="row">
+    <div>
+      <h1>🏮 <span class="zh">上海4日之旅</span><span class="ja">上海4日間の旅</span></h1>
+      <div class="date">2026.8.3 (<span class="zh">一</span><span class="ja">月</span>) – 8.6 (<span class="zh">四</span><span class="ja">木</span>)・7<span class="zh">人</span><span class="ja">名</span>・<span class="zh">静安寺・愚园路住宿</span><span class="ja">静安寺・愚園路泊</span></div>
+    </div>
+    <div class="lang-sw">
+      <button id="btn-zh" class="on" onclick="setLang('zh')">简体</button>
+      <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+    </div>
+  </div>
+</div>
+<!-- ══════════ TAB 1 行程 ══════════ -->
+<div class="tab on" id="tab-iti">
+<div class="wrap">
+  <div id="map"></div>
+
+  <div class="days" id="dayChips">
+    <button class="day-chip on" onclick="setDay(1)"><b>8/3</b><span class="zh">周一・抵达</span><span class="ja">月・到着</span></button>
+    <button class="day-chip" onclick="setDay(2)"><b>8/4</b><span class="zh">周二・市区3选1</span><span class="ja">火・市内3コース</span></button>
+    <button class="day-chip" onclick="setDay(3)"><b>8/5</b><span class="zh">周三・迪士尼</span><span class="ja">水・ディズニー</span></button>
+    <button class="day-chip" onclick="setDay(4)"><b>8/6</b><span class="zh">周四・半天＋回国</span><span class="ja">木・半日＋帰国</span></button>
+  </div>
+
+  <!-- ─────── DAY 1 ─────── -->
+  <div class="day-pane on" id="day1">
+    <div class="wear" style="background:#FDF2F5;border-color:#EFC7BC">👕 <b><span class="zh">今天穿 AGU 团服 T恤！</span><span class="ja">本日は AGU おそろいTシャツ！</span></b><span class="zh">第一天大家统一穿 AGU T恤，拍团体照最好看，人多时也比较好找人。请放进随身行李，不要托运。</span><span class="ja">初日はみんなでAGUのTシャツを着ます。集合写真が映えるうえ、人混みでも仲間を見つけやすくなります。預け荷物ではなく手荷物に入れてきてください。</span></div>
+    <div class="wear">☀️ <b><span class="zh">建议穿着</span><span class="ja">服装アドバイス</span></b>：<span class="zh">团服外可带薄外套（机舱与商场冷气强）、好走的鞋。8月上海高温约35°C、湿度高，傍晚常有雷阵雨，请带折叠伞。</span><span class="ja">Tシャツの上に薄手の羽織りを（機内・モール内は冷房強め）、歩きやすい靴。8月の上海は最高約35°C・高湿度。夕方に雷雨が多いので折りたたみ傘を。</span></div>
+
+    <div class="spot">
+      <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/A_maglev_train_coming_out%2C_Pudong_International_Airport%2C_Shanghai.jpg/960px-A_maglev_train_coming_out%2C_Pudong_International_Airport%2C_Shanghai.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EEF3F8,#C9D9EA)">✈️</div><span class="t-time">15:25–17:00</span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--trans)"><span class="zh">交通</span><span class="ja">交通</span></span><span class="zh">抵达上海 → 前往住处</span><span class="ja">上海到着 → 宿へ</span><span class="yomi">浦东机场（プードン）／虹桥机场（ホンチャオ）</span></h3>
+        <div class="desc"><span class="zh"><b>✈️ HO1380（吉祥航空）</b>成田 T2 13:20 → 浦东 T2 <b>15:25</b><br>　搭乘：龍・チョウショウ<br><b>✈️ MU538（中国东方航空）</b>羽田 T3 14:30 → 虹桥 T1 <b>16:35</b><br>　搭乘：みなみ・チンキ・小玉・博源<br><b>📍 已在当地的伙伴</b>：直接到民宿会合<br><br><b>17:00 在民宿（愚园路40号）会合</b>，之后一起出门。入境＋提领行李约需30–40分，先到的人可以先拿门禁卡进房休息。</span><span class="ja"><b>✈️ HO1380（吉祥航空）</b>成田T2 13:20 → 浦東T2 <b>15:25</b><br>　搭乗：龍・チョウショウ<br><b>✈️ MU538（中国東方航空）</b>羽田T3 14:30 → 虹橋T1 <b>16:35</b><br>　搭乗：みなみ・チンキ・小玉・博源<br><b>📍 現地にいるメンバー</b>：そのまま民泊で合流<br><br><b>17:00に民泊（愚園路40号）で集合</b>し、そこから一緒に出発。入国＋荷物受取に30–40分ほど。先に着いた人はキーボックスからカードを取って部屋で休んでいてOKです。</span></div>
+        <div class="trans-note">🚇 <span class="zh"><b>浦东T2 → 静安寺</b>：地铁2号线直达约80–90分（¥8，广兰路站需同月台换乘）／打车约60分・¥170。预计17:00–17:30抵达。<br><b>虹桥T1 → 静安寺</b>：打车约25分・¥40最方便（地铁需从T1走到T2搭2号线，约35分）。预计17:30–17:45抵达。</span><span class="ja"><b>浦東T2 → 静安寺</b>：2号線で直通80–90分（¥8、広蘭路で同ホーム乗換）／タクシー約60分・¥170。17:00–17:30着の見込み。<br><b>虹橋T1 → 静安寺</b>：タクシー約25分・¥40が最も楽（地下鉄はT1からT2まで歩いて2号線、約35分）。17:30–17:45着の見込み。</span></div>
+        <div class="tip">🗺️ <span class="zh">三种到住处的方式（时间・费用・注意事项）都整理在「<b>指南 → 机场・车站 ⇄ 住处 交通指引</b>」，出发前先看一眼。</span><span class="ja">宿までの3つのルート（所要時間・料金・注意点）は「<b>ガイド → 空港・駅 ⇄ 宿 アクセスガイド</b>」にまとめてあります。出発前に一度目を通しておいてください。</span></div>
+        <div class="tip">📌 <span class="zh">落地后先在机场完成：①Alipay 实名认证并绑好卡 ②开通乘车码 ③确认漫游／eSIM 已连上网。这三件事做完，之后行程都会顺很多。</span><span class="ja">着陸後、空港で3点を済ませておくと後がぐっと楽：①Alipayの本人認証とカード紐付け ②乗車コードの設定 ③ローミング／eSIMの接続確認。</span></div>
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="ph"><div class="grad" style="display:flex;background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🏠</div><span class="t-time">17:00–17:45</span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--hotel)"><span class="zh">住宿</span><span class="ja">宿泊</span></span><span class="zh">麦克公寓（愚园路40号・Homestay 归宿）</span><span class="ja">麦克アパートメント（愚園路40号・Homestay 归宿）</span><span class="yomi">麦克公寓（マイクー ゴンユー）・愚园路（ユーユエンルー）</span></h3>
+        <div class="desc"><span class="zh"><b>地址：</b>上海市静安区静安寺街道愚园路40号<br><b>交通：</b>地铁2号线【静安寺】站 <b>2号口</b>出来即到（静安寺站也有7号线与14号线）<br><b>Wi-Fi：</b>麦克301　<b>密码：</b>cityhome301<br><b>进门：</b>大门栏杆上的密码盒里有门禁卡与铁门钥匙，<b>密码 0803</b><br><b>退房：</b>8/6（四）12:00 前</span><span class="ja"><b>住所：</b>上海市静安区 静安寺街道 愚園路40号<br><b>アクセス：</b>地下鉄2号線【静安寺】駅 <b>2番出口</b>すぐ（静安寺駅は7号線・14号線も乗り入れ）<br><b>Wi-Fi：</b>麦克301　<b>パスワード：</b>cityhome301<br><b>入室：</b>正門の柵にあるキーボックスに入館カードと鉄門の鍵。<b>暗証番号 0803</b><br><b>チェックアウト：</b>8/6（木）12:00まで</span></div>
+        <div class="tip">📌 <span class="zh">这是民宿型公寓，不是酒店，柜台不一定常驻。有任何问题请直接在微信群里联络「Homestay 归宿」房东。行李寄放请事先在群里问一声。</span><span class="ja">ホテルではなく民泊タイプのアパートのため、フロントが常駐しているとは限りません。何かあればWeChatグループで「Homestay 归宿」のホストに直接連絡を。荷物預けも事前にグループで一声かけておくと安心です。</span></div>
+        <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/search?keyword=%E6%84%9A%E5%9B%AD%E8%B7%AF40%E5%8F%B7%20%E9%BA%A6%E5%85%8B%E5%85%AC%E5%AF%93&city=%E4%B8%8A%E6%B5%B7">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=40+Yuyuan+Road+Jing'an+Shanghai">Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Red_braised_pork_belly_%E7%BA%A2%E7%83%A7%E8%82%89_h%C3%B3ngsh%C4%81or%C3%B2u_23_January_2025_Filipinas4.jpg/960px-Red_braised_pork_belly_%E7%BA%A2%E7%83%A7%E8%82%89_h%C3%B3ngsh%C4%81or%C3%B2u_23_January_2025_Filipinas4.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🍖</div><span class="t-time">18:15–19:30</span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--food)"><span class="zh">食物</span><span class="ja">グルメ</span></span><span class="zh">晚餐・老正兴菜馆（福州路）</span><span class="ja">夕食・老正興菜館（福州路）</span><span class="yomi">老正兴（ラオジェンシン）・福州路（フージョウルー）</span></h3>
+        <div class="badges"><span class="bdg b-eat"><span class="zh">必吃・红烧肉</span><span class="ja">必食・紅焼肉</span></span><span class="bdg b-eat"><span class="zh">米其林一星</span><span class="ja">ミシュラン一つ星</span></span></div>
+        <div class="desc"><span class="zh">17:45 从住处出发，2号线静安寺→南京东路6站（约13分）。160年老字号本帮菜，7人正好点一桌合菜当第一晚的接风宴。招牌红烧肉、油爆虾、草头圈子，人均约¥150–200。就在南京东路步行街旁一条街，吃完直接开始散步。</span><span class="ja">17:45に宿を出発、2号線・静安寺→南京東路まで6駅（約13分）。創業160年の上海料理老舗で、7人で円卓を囲む初日の歓迎ディナーにぴったり。名物の紅焼肉、油爆蝦、草頭圏子など、一人約¥150–200。南京東路歩行者天国のすぐ隣の通りなので、食後はそのまま散策へ。</span></div>
+        <div class="meta"><span>★4.1（70<span class="zh">条评论</span><span class="ja">件</span>）</span><span><span class="zh">建议提前订位</span><span class="ja">予約推奨</span></span></div>
+        <div class="tip">🍜 <span class="zh">想轻松吃的话，同一带也有小杨生煎（南京东路店）与沈大成糕点，生煎＋小馄饨人均¥30就能解决。</span><span class="ja">軽く済ませたいなら、同エリアの小楊生煎（南京東路店）や沈大成の点心も。生煎＋ミニワンタンで一人¥30ほど。</span></div>
+        <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.480069,31.233164&name=老正兴菜馆&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Lao+Zheng+Xing+Restaurant+Fuzhou+Road+Shanghai">Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/2024-Apr_Shanghai_East_Nanjing_Road_at_night_01.jpg/960px-2024-Apr_Shanghai_East_Nanjing_Road_at_night_01.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🏮</div><span class="t-time">19:30–20:30</span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--shop)"><span class="zh">购物</span><span class="ja">ショッピング</span></span><span class="zh">南京东路步行街</span><span class="ja">南京東路歩行者天国</span><span class="yomi">南京东路（ナンジン ドンルー）</span></h3>
+        <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・霓虹招牌</span><span class="ja">必撮・ネオン看板</span></span><span class="bdg b-buy"><span class="zh">必买・沈大成青团</span><span class="ja">必買・沈大成の青団</span></span></div>
+        <div class="desc"><span class="zh">中国最有名的商业街，入夜后霓虹全开、人潮汹涌，本身就是一场show。沿途有第一食品商店（伴手礼一站买齐）、沈大成（青团、条头糕）、大白兔专柜。慢慢往东走1.4km就直接接到外滩。</span><span class="ja">中国で最も有名な繁華街。夜になるとネオンが一斉に灯り、人波そのものがひとつのショー。途中には第一食品商店（お土産がここで一通り揃う）、沈大成（青団・条頭糕）、大白兎ミルクキャンディの売り場も。東へ1.4kmゆっくり歩けば、そのまま外灘に出ます。</span></div>
+        <div class="tip">📸 <span class="zh">拍照tips：站在步行街中央、以「和平饭店方向」为背景拍纵向，两侧霓虹会形成漂亮的引导线。观光小火车¥5可以坐一段省点力气。</span><span class="ja">撮影tips：歩行者天国の中央に立ち、和平飯店方向を背景に縦構図で。両側のネオンが綺麗な導線になります。観光カート（¥5）に一区間乗ると体力温存に。</span></div>
+        <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.474898,31.234721&name=南京东路步行街&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Nanjing+Road+Pedestrian+Street+Shanghai">Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/A_night_at_the_Bund_-_Shanghai.jpg/960px-A_night_at_the_Bund_-_Shanghai.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EDF3FA,#C9D9EA)">🌃</div><span class="t-time">20:30–21:50</span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">外滩夜景（万国建筑群×陆家嘴）</span><span class="ja">外灘ナイトビュー（万国建築群×陸家嘴）</span><span class="yomi">外滩（ワイタン）・陆家嘴（ルージャーズイ）</span></h3>
+        <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・上海代表夜景</span><span class="ja">必撮・上海を代表する夜景</span></span></div>
+        <div class="desc"><span class="zh">上海的门面：背后是1920年代的万国建筑群，对岸是东方明珠与上海中心的灯海，隔着黄浦江正面对望。观景台是双层的，人多时可以走上层。灯光一般亮到22:00左右。</span><span class="ja">上海の顔とも言える場所。背後には1920年代の万国建築群、対岸には東方明珠と上海タワーの光の海が黄浦江を挟んで向かい合います。展望テラスは2層構造で、混雑時は上段へ。ライトアップは概ね22:00頃まで。</span></div>
+        <div class="tip">⏰ <span class="zh"><b>外滩灯光 22:00 准时熄灯！</b>（假日可能延长）所以务必在 21:45 前拍完。想拍陆家嘴「三件套」，比起金茂大厦楼下的花坛，更推荐导航到<b>东泰路×花园石桥路交叉口</b>，在上海中心大厦楼下的台阶处拍；<b>九江路</b>也是拍东方明珠的好位置，而且不用人挤人。</span><span class="ja"><b>外灘のライトアップは22:00きっかりに消灯！</b>（祝日は延長の場合あり）21:45までに撮り終えましょう。陸家嘴の「三種の神器」を撮るなら、金茂ビル下の花壇より<b>東泰路×花園石橋路の交差点</b>、上海タワー下の階段からがおすすめ。<b>九江路</b>も東方明珠を撮るのに良い位置で、しかも人混みを避けられます。</span></div>
+        <div class="tip">⛴️ <span class="zh">想看黄浦江景不必花大钱搭游船——<b>轮渡只要¥2</b>就看得到几乎一样的江景（东金线部分时段停航，出发前先确认班次）。</span><span class="ja">黄浦江の景色を見るのに高い遊覧船は不要——<b>フェリーならわずか¥2</b>でほぼ同じ景色が楽しめます（東金線は運休時間帯があるので事前に確認を）。</span></div>
+        <div class="tip">📸 <span class="zh">拍照tips：日落后20–30分的「蓝调时刻」天空是深蓝色，与金色楼灯对比最漂亮。8月上海日落约18:50，所以20:00前后就很美了。人像请把对岸大楼放在画面右侧。</span><span class="ja">撮影tips：日没後20–30分の「ブルーアワー」は空が濃い青になり、金色のビル明かりとの対比が最も美しい。8月の上海の日没は約18:50なので、20:00前後がベスト。人物撮影では対岸のビル群を画面右に置くとバランス◎。</span></div>
+        <div class="trans-note">🚇 <span class="zh">回程：南京东路站搭2号线直达静安寺（约13分），末班车约23:00。7人打车需分2台，约¥45／台。</span><span class="ja">帰り：南京東路駅から2号線で静安寺まで直通（約13分）、終電は約23:00。7人でタクシーなら2台に分乗、1台約¥45。</span></div>
+        <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.490577,31.240261&name=外滩&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=The+Bund+Shanghai">Google Maps</a></div>
+      </div>
+    </div>
+    <div class="memo"><label>📷 <span class="zh">上传今日旅记照片</span><span class="ja">今日の旅の写真をアップ</span><input type="file" accept="image/*" multiple onchange="addMemo(this,'m1')"></label><div class="strip" id="m1"></div></div>
+  </div>
+
+  <!-- ─────── DAY 2 ─────── -->
+  <div class="day-pane" id="day2">
+    <div class="wear">🌤️ <b><span class="zh">建议穿着</span><span class="ja">服装アドバイス</span></b>：<span class="zh">排汗短袖＋帽子、好走的鞋。今天步行量大，请带水壶与折叠伞（午后雷阵雨机率高）。冷气场所多，薄外套还是要带。</span><span class="ja">速乾の半袖＋帽子、歩きやすい靴。本日は歩行距離が長め。水筒と折りたたみ傘を（午後の雷雨率高め）。冷房の効いた場所も多いので薄手の羽織りも。</span></div>
+
+    <div class="rt-lead">🗺️ <span class="zh"><b>关于路线：</b>科技馆在浦东、武康路在西边、豫园在老城厢——三个方向相距各15–20公里，8月35°C下一天全走完会很吃力。所以整理成 <b>3条顺路路线</b>，选一条走就好，剩下的可以留给第三天不去迪士尼的伙伴。</span><span class="ja"><b>ルートについて：</b>科技館は浦東、武康路は西、豫園は旧市街——3方向それぞれ15–20km離れており、35°Cの8月に1日で全部回るのはかなり過酷です。そこで<b>順路の3コース</b>にまとめました。1つ選んで回るのがおすすめ。残りは3日目にディズニーへ行かないメンバーの行き先にも。</span></div>
+
+    <div class="days" id="rtChips">
+      <button class="day-chip on" onclick="setRoute('A')"><b>A<span class="zh">案</span><span class="ja">案</span></b><span class="zh">浦东现代日</span><span class="ja">浦東・未来都市</span></button>
+      <button class="day-chip" onclick="setRoute('B')"><b>B<span class="zh">案</span><span class="ja">案</span></b><span class="zh">老城厢＋购物</span><span class="ja">旧市街＋買い物</span></button>
+      <button class="day-chip" onclick="setRoute('C')"><b>C<span class="zh">案</span><span class="ja">案</span></b><span class="zh">法租界＋徐家汇</span><span class="ja">仏租界＋徐家匯</span></button>
+    </div>
+
+    <!-- ===== A案 ===== -->
+    <div class="rt-pane on" id="rtA">
+      <div class="rt-sum"><b><span class="zh">A案・浦东现代日</span><span class="ja">A案・浦東 未来都市デー</span></b><br><span class="zh">科技馆 → 陆家嘴午餐 → 上海中心118层 → 豫园城隍庙夜景。<b>几乎全程2号线一条到底</b>，换乘最少、冷气场所最多，最适合怕热的一天。</span><span class="ja">科技館 → 陸家嘴でランチ → 上海タワー118階 → 豫園・城隍廟の夜景。<b>ほぼ2号線一本</b>で乗換が最少、冷房スポットも多く、暑さが苦手な人に最適。</span></div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Shanghai_-_Shanghai_Science_and_Technology_Museum_Exterior_Photo.jpg/960px-Shanghai_-_Shanghai_Science_and_Technology_Museum_Exterior_Photo.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EDF3FA,#C9D9EA)">🔬</div><span class="t-time">9:30–12:00</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--act)"><span class="zh">活动</span><span class="ja">アクティビティ</span></span><span class="zh">上海科技馆（2026年2月焕新开放）</span><span class="ja">上海科技館（2026年2月リニューアル開館）</span><span class="yomi">上海科技馆（シャンハイ カージーグワン）</span></h3>
+          <div class="badges"><span class="bdg b-photo"><span class="zh">必看・十大展区</span><span class="ja">必見・10大展示エリア</span></span></div>
+          <div class="desc"><span class="zh">闭馆改造近三年、投资约8.2亿元后，2026年2月17日重新开放，是全球科技馆单次改造规模最大的项目。设有雨林秘境、明日行者（机器人与AI）、飞行探秘（VR模拟飞行）、神奇的我等十大常设展区，以及巨幕、球幕、四维三大影院。85%以上是可动手互动的展项，大人也会玩到不想走。</span><span class="ja">約3年の休館と約8.2億元をかけた改修を経て、2026年2月17日にリニューアルオープン。科学館としては世界最大規模の一斉改修でした。「雨林秘境」「明日行者（ロボット＆AI）」「飛行探秘（VRフライトシミュレーション）」「神奇的我」など10の常設展示エリアに加え、巨大スクリーン・ドーム・4Dの3シアターを完備。85%以上が体験型展示で、大人も夢中になります。</span></div>
+          <div class="meta"><span>★4.2</span><span><span class="zh">成人¥45／学生¥22</span><span class="ja">大人¥45／学生¥22</span></span><span><span class="zh">周二–周日 9:00–17:00（周一闭馆）</span><span class="ja">火–日 9:00–17:00（月曜休館）</span></span></div>
+          <div class="tip">🎫 <span class="zh">重要：需在「上海科技馆」微信公众号／小程序实名分时段预约购票，当日常常售罄，请<b>出发前几天就先订</b>。外国护照可实名登记。</span><span class="ja">重要：「上海科技館」WeChat公式アカウント／ミニプログラムで実名・時間帯指定の事前予約が必要。当日券は売り切れることが多いので<b>数日前の予約</b>を。外国パスポートでも実名登録可。</span></div>
+          <div class="trans-note">🚇 <span class="zh">2号线 静安寺 → 上海科技馆，直达约30分（¥5）。9:00 出发刚好开馆入场。</span><span class="ja">2号線・静安寺 → 上海科技館まで直通で約30分（¥5）。9:00発なら開館と同時に入場できます。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.541078,31.21797&name=上海科技馆&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Shanghai+Science+and+Technology+Museum">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Skyline_of_Shanghai_at_day%2C_Aug_10_2023.jpg/960px-Skyline_of_Shanghai_at_day%2C_Aug_10_2023.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EDF3FA,#C9D9EA)">🍽️</div><span class="t-time">12:30–14:00</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--food)"><span class="zh">食物</span><span class="ja">グルメ</span></span><span class="zh">午餐・陆家嘴 IFC 国金中心商场</span><span class="ja">ランチ・陸家嘴 IFCモール</span><span class="yomi">国金中心（グオジン ジョンシン）・陆家嘴（ルージャーズイ）</span></h3>
+          <div class="badges"><span class="bdg b-eat"><span class="zh">冷气充足・7人好订位</span><span class="ja">冷房完備・7名でも入りやすい</span></span></div>
+          <div class="desc"><span class="zh">2号线科技馆→陆家嘴4站（约12分），出站直通商场不用晒太阳。B2与3–4楼有大量餐厅：小南国、鼎泰丰、和府捞面、日料与西餐都有，人均¥80–200，7人也容易安排。楼上还有观景平台可以先拍一张。</span><span class="ja">2号線で科技館→陸家嘴まで4駅（約12分）、駅からモール直結なので炎天下を歩かずに済みます。B2と3–4階にレストランが集中：小南国、鼎泰豊、和府撈麺、和食や洋食まで揃い、一人¥80–200。7名でも席を取りやすい。上階の展望テラスで1枚撮るのもおすすめ。</span></div>
+          <div class="meta"><span>★4.4（1,194<span class="zh">条评论</span><span class="ja">件</span>）</span><span>10:00–22:00</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.501858,31.236862&name=上海国金中心商场&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Shanghai+IFC+Mall+Lujiazui">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/View_from_Shanghai_Tower_Observation_Deck.jpg/960px-View_from_Shanghai_Tower_Observation_Deck.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EDF3FA,#C9D9EA)">🏙️</div><span class="t-time">14:00–16:30</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">上海中心大厦 118层观景台＋东方明珠</span><span class="ja">上海タワー118階展望台＋東方明珠</span><span class="yomi">上海中心（シャンハイ ジョンシン）・东方明珠（ドンファン ミンジュー）</span></h3>
+          <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・546m俯瞰</span><span class="ja">必撮・地上546mの眺め</span></span><span class="bdg b-photo"><span class="zh">避暑・全程室内</span><span class="ja">避暑・全て屋内</span></span></div>
+          <div class="desc"><span class="zh">中国第一高楼，118层「上海之巅」在546m高处，电梯55秒直达，是全上海最好的俯瞰点。整段行程都在冷气里，正好避开一天最热的时段。下楼后走到滨江步道，可以把东方明珠与外滩对岸一起拍进去。</span><span class="ja">中国一の高さを誇るビル。118階の展望台「上海之巓」は地上546m、エレベーターわずか55秒で直通。上海随一の眺望です。全行程が冷房内なので、一日で最も暑い時間帯をやり過ごすのに最適。降りたら濱江遊歩道へ出て、東方明珠と対岸の外灘を一緒にフレームに収めましょう。</span></div>
+          <div class="meta"><span><span class="zh">门票约¥180（现场／小程序）</span><span class="ja">チケット約¥180（現地／ミニプログラム）</span></span><span>9:00–21:00</span></div>
+          <div class="tip">📸 <span class="zh">拍照tips：玻璃反光是大敌，把镜头贴近玻璃、关掉闪光灯就干净很多。想省钱的话，环球金融中心「94层」或商场楼顶平台也拍得到，甚至能把上海中心本身拍进去。</span><span class="ja">撮影tips：ガラスの映り込みが大敵。レンズをガラスに密着させフラッシュをオフにすると格段に綺麗に。予算を抑えたいなら森ビル（環球金融中心）94階やモール屋上テラスからでも十分。上海タワー自体を画角に入れられる利点も。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.499755,31.239689&name=东方明珠・陆家嘴&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Shanghai+Tower+Observation+Deck">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/20090510_Shanghai_City_God_Temple_6514.jpg/960px-20090510_Shanghai_City_God_Temple_6514.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🏯</div><span class="t-time">17:30–19:00</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">城隍庙・豫园商城（夜景）</span><span class="ja">城隍廟・豫園商城（ナイトビュー）</span><span class="yomi">城隍庙（チョンホァンミャオ）・豫园（ユーユエン）</span></h3>
+          <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・飞檐＋灯笼</span><span class="ja">必撮・反り屋根＋提灯</span></span><span class="bdg b-buy"><span class="zh">必买・老字号伴手礼</span><span class="ja">必買・老舗みやげ</span></span></div>
+          <div class="desc"><span class="zh">14号线陆家嘴→豫园1站（约3分）。豫园园林17:00 就关（¥30，想进园林请改成B案早上去），但外围的城隍庙与豫园商城是免费的，天黑后整片仿古建筑打灯、九曲桥倒影超美，是最上镜的时段。</span><span class="ja">14号線で陸家嘴→豫園はわずか1駅（約3分）。豫園の庭園自体は17:00で閉園（¥30。庭園に入りたい場合はB案で午前中に）。ただし外側の城隍廟と豫園商城は入場無料で、日が暮れると古建築群がライトアップされ、九曲橋の水面の映り込みが絶景に。写真的にはこの時間帯が一番です。</span></div>
+          <div class="tip">🥟 <span class="zh">晚餐就在这里解决：南翔馒头店（小笼包，¥40起，人多可外带窗口）或绿波廊（本帮宴席，人均¥200）。想吃蟹黄面的话，坐10号线2站到新天地旁的蟹黄鱼面馆也很近。</span><span class="ja">夕食はここで：南翔饅頭店（小籠包、¥40〜。混雑時はテイクアウト窓口も）または緑波廊（上海料理のコース、一人約¥200）。カニ味噌麺が食べたい場合は、10号線で2駅、新天地そばの蟹黄魚麺館へ。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.492507,31.225731&name=上海城隍庙&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=City+God+Temple+of+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== B案 ===== -->
+    <div class="rt-pane" id="rtB">
+      <div class="rt-sum"><b><span class="zh">B案・老城厢＋购物日</span><span class="ja">B案・旧市街＋ショッピングデー</span></b><br><span class="zh">豫园（早上开园就进）→ 城隍庙 → 蟹黄面午餐 → 新天地避暑 → 光明邨鲜肉月饼 → 星巴克烘焙工坊 → 张园。<b>由东往西一路顺，且把「必吃」全收进来</b>。</span><span class="ja">豫園（開園と同時に）→ 城隍廟 → カニ味噌麺のランチ → 新天地で避暑 → 光明邨の鮮肉月餅 → スタバ ロースタリー → 張園。<b>東から西へ一直線、しかも「必食」を全部回収</b>できるコース。</span></div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/2024-Apr_Shanghai_Yu_Yuan_Garden_%E8%B1%AB%E5%9B%AD_-_img_20.jpg/960px-2024-Apr_Shanghai_Yu_Yuan_Garden_%E8%B1%AB%E5%9B%AD_-_img_20.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EFF5EC,#CBDFC4)">🏯</div><span class="t-time">9:00–10:30</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">豫园（明代江南园林）</span><span class="ja">豫園（明代の江南庭園）</span><span class="yomi">豫园（ユーユエン）</span></h3>
+          <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・九曲桥＋湖心亭</span><span class="ja">必撮・九曲橋＋湖心亭</span></span></div>
+          <div class="desc"><span class="zh">建于1559年的明代私家园林，假山、亭台、锦鲤水池层层叠叠，是上海最古典的一面。<b>周一闭园，8/4是周二正好开</b>。开园9:00 一到就进去，人少、光线柔、气温也还没起来，是一天里最舒服的90分钟。</span><span class="ja">1559年築の明代の私邸庭園。築山・楼閣・錦鯉の池が幾重にも重なる、上海で最も古典的な一面です。<b>月曜休園ですが8/4は火曜なので開園</b>。9:00の開園と同時に入れば、人が少なく光も柔らかく気温もまだ上がりきらない、一日で最も快適な90分になります。</span></div>
+          <div class="meta"><span>★4.5</span><span>¥30</span><span>9:00–16:30（<span class="zh">周一闭园</span><span class="ja">月曜休園</span>）</span></div>
+          <div class="trans-note">🚇 <span class="zh">2号线静安寺→南京东路，转10号线1站到豫园，约30分。或7人分2台打车约30分／¥55一台。</span><span class="ja">2号線で静安寺→南京東路、10号線に乗換え1駅で豫園、約30分。または7人2台に分乗しタクシーで約30分／1台¥55。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.492094,31.227236&name=豫园&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Yu+Garden+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/20090510_Shanghai_City_God_Temple_6514.jpg/960px-20090510_Shanghai_City_God_Temple_6514.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🏮</div><span class="t-time">10:30–12:00</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">城隍庙・豫园老街</span><span class="ja">城隍廟・豫園オールドストリート</span><span class="yomi">城隍庙（チョンホァンミャオ）</span></h3>
+          <div class="badges"><span class="bdg b-buy"><span class="zh">必买・梨膏糖・五香豆</span><span class="ja">必買・梨膏糖・五香豆</span></span><span class="bdg b-eat"><span class="zh">必吃・南翔小笼</span><span class="ja">必食・南翔の小籠包</span></span></div>
+          <div class="desc"><span class="zh">出豫园就是城隍庙商圈，仿古建筑一整片，老字号小吃与伴手礼都集中在这。可以在南翔馒头店先吃几笼小笼包垫胃（外带窗口排队快很多），再逛梨膏糖、五香豆等老铺。</span><span class="ja">豫園を出るとすぐ城隍廟エリア。古建築が一面に広がり、老舗の軽食とお土産がここに集中しています。まず南翔饅頭店で小籠包を数せいろ（テイクアウト窓口の方が断然早い）、その後は梨膏糖や五香豆などの老舗めぐりを。</span></div>
+          <div class="tip">💡 <span class="zh">11:30 后人潮爆增、气温也到顶，所以务必在12点前撤退去吃午餐。</span><span class="ja">11:30を過ぎると人出も気温もピークに。12時前には切り上げてランチへ向かうのが正解です。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.492507,31.225731&name=上海城隍庙&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=City+God+Temple+of+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Roe_inside_steamed_female_hairy_crab.jpg/960px-Roe_inside_steamed_female_hairy_crab.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FDF3E3,#F5D9A8)">🦀</div><span class="t-time">12:30–13:45</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--food)"><span class="zh">食物</span><span class="ja">グルメ</span></span><span class="zh">午餐・蟹黄鱼面馆（太仓路200号）</span><span class="ja">ランチ・蟹黄魚麺館（太倉路200号）</span><span class="yomi">蟹黄面（シエホァン ミエン）</span></h3>
+          <div class="badges"><span class="bdg b-eat"><span class="zh">必吃・蟹黄面</span><span class="ja">必食・カニ味噌麺</span></span></div>
+          <div class="desc"><span class="zh">日本伙伴指定的蟹黄面就在这里。一整碗金黄蟹粉拌进细面，浓郁鲜甜、蟹味扎实，是上海最有代表性的一碗面。就在新天地旁边，吃完直接接下一站。</span><span class="ja">日本メンバーがリクエストしていたカニ味噌麺はここ。黄金色のカニ味噌をたっぷり細麺に絡めた濃厚な一杯で、上海を代表する麺料理です。新天地のすぐ隣なので、食後はそのまま次のスポットへ。</span></div>
+          <div class="meta"><span>★4.2</span><span><span class="zh">蟹黄面 ¥58–98</span><span class="ja">カニ味噌麺 ¥58–98</span></span></div>
+          <div class="trans-note">🚇 <span class="zh">10号线 豫园 → 新天地 2站（约5分），出站步行5分。</span><span class="ja">10号線で豫園 → 新天地まで2駅（約5分）、駅から徒歩5分。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.47379,31.22126&name=蟹黄鱼面馆太仓路店&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Crab+Roe+Noodles+Taicang+Road+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Fountain_with_Sculptures_in_Xintiandi_Shanghai_20210329.jpg/960px-Fountain_with_Sculptures_in_Xintiandi_Shanghai_20210329.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🧱</div><span class="t-time">14:00–16:00</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--shop)"><span class="zh">购物</span><span class="ja">ショッピング</span></span><span class="zh">新天地（石库门商圈・避暑时段）</span><span class="ja">新天地（石庫門エリア・避暑タイム）</span><span class="yomi">新天地（シンティエンディー）</span></h3>
+          <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・石库门砖墙</span><span class="ja">必撮・石庫門のレンガ壁</span></span></div>
+          <div class="desc"><span class="zh">把石库门老房子改造成餐厅酒吧的街区，砖墙巷弄配上现代店铺，是上海最好拍的商圈之一。这个时段正是一天最热（14–16点常达36°C），室内商场与咖啡厅刚好用来喘口气。太平湖公园的绿荫也很凉快。</span><span class="ja">石庫門の古い家屋をレストランやバーに改装したエリア。レンガの壁と路地に現代的な店が並び、上海で最も撮影映えする一角です。この時間帯は一日で最も暑い（14–16時は36°Cに達することも）ので、屋内モールやカフェでひと息つくのに最適。太平湖公園の木陰も涼しいですよ。</span></div>
+          <div class="tip">☕ <span class="zh">推荐在这里喝下午茶：新天地里也有霸王茶姬与多家咖啡店，冷气＋冰饮补充体力再继续。</span><span class="ja">ここでのティータイムがおすすめ：新天地内には覇王茶姫やカフェが多数。冷房と冷たいドリンクで体力を回復してから次へ。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.47525,31.21919&name=新天地&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Xintiandi+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Gu%C4%81ngm%C3%ADngc%C5%ABn_2.jpg/960px-Gu%C4%81ngm%C3%ADngc%C5%ABn_2.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FDF3E3,#F5D9A8)">🥮</div><span class="t-time">16:00–16:30</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--food)"><span class="zh">食物</span><span class="ja">グルメ</span></span><span class="zh">光明邨・现烤鲜肉月饼（淮海中路）</span><span class="ja">光明邨・焼きたて鮮肉月餅（淮海中路）</span><span class="yomi">光明邨（グアンミンツン）・鲜肉月饼（シエンロウ ユエビン）</span></h3>
+          <div class="badges"><span class="bdg b-eat"><span class="zh">必吃・鲜肉月饼</span><span class="ja">必食・鮮肉月餅</span></span></div>
+          <div class="desc"><span class="zh">从新天地步行约10分或1站地铁。酥皮千层、内馅是滚烫多汁的鲜肉，约¥6一个，趁热吃最好。门口排队是常态，但队伍移动很快。买几个当散步点心，剩下的可以带回住处当宵夜。</span><span class="ja">新天地から徒歩約10分、または地下鉄1駅。何層ものサクサクのパイ皮に、熱々ジューシーな肉餡がぎっしり。1個約¥6で、焼きたてを頬張るのが一番。店頭の行列は常ですが回転は速いです。数個買って食べ歩きに、残りは宿で夜食にも。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.4675643,31.2205026&name=光明邨大酒家&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Guang+Ming+Cun+Huaihai+Road+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Starbucks_Reserve_Roastery_Shanghai_01.jpg/960px-Starbucks_Reserve_Roastery_Shanghai_01.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#F3EBE2,#D9C3A8)">☕</div><span class="t-time">17:00–18:30</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">星巴克臻选上海烘焙工坊（南京西路789号）</span><span class="ja">スターバックス リザーブ ロースタリー上海</span><span class="yomi">星巴克烘焙工坊（シンバーカー ホンベイ ゴンファン）</span></h3>
+          <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・巨型铜罐烘豆</span><span class="ja">必撮・巨大銅釜ロースター</span></span><span class="bdg b-buy"><span class="zh">必买・上海限定杯</span><span class="ja">必買・上海限定タンブラー</span></span></div>
+          <div class="desc"><span class="zh">2号线陕西南路→南京西路1站。曾是全球最大的星巴克，两层挑高空间、头顶铜管运送咖啡豆、现场烘豆表演，还有一般门市喝不到的臻选特调（氮气冷萃、咖啡鸡尾酒）与烘焙坊面包。隔壁就是船型的 LV 旗舰店。</span><span class="ja">2号線で陝西南路→南京西路まで1駅。かつて世界最大だったスターバックス。2階建ての吹き抜け空間、頭上の銅管を流れるコーヒー豆、目の前での焙煎ショー。通常店舗にはないリザーブ限定ドリンク（ナイトロコールドブリュー、コーヒーカクテル）やベーカリーも。隣は船型のルイ・ヴィトン旗艦店。</span></div>
+          <div class="meta"><span>★4.5（745<span class="zh">条评论</span><span class="ja">件</span>）</span><span>9:00–23:00</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.4614034,31.2305679&name=星巴克臻选烘焙工坊&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Starbucks+Reserve+Roastery+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/A_Type_of_Shikumen_Gable_in_ZhangYuan_Shanghai.JPG/960px-A_Type_of_Shikumen_Gable_in_ZhangYuan_Shanghai.JPG" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🏘️</div><span class="t-time">18:30–20:30</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--shop)"><span class="zh">购物</span><span class="ja">ショッピング</span></span><span class="zh">张园（石库门街区）＋晚餐</span><span class="ja">張園（石庫門街区）＋夕食</span><span class="yomi">张园（ジャンユエン）</span></h3>
+          <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・夜灯石库门</span><span class="ja">必撮・夜のライトアップ</span></span></div>
+          <div class="desc"><span class="zh">从烘焙工坊步行约8分。1882年的「海上第一名园」，现存规模最大、保存最完整的石库门建筑群，改造成精品店与餐厅街区。夜间打灯后比新天地更安静好拍。晚餐可以在张园内的餐厅，或走回南京西路商圈选择更多。</span><span class="ja">ロースタリーから徒歩約8分。1882年創建の「海上第一名園」で、上海に現存する最大規模かつ最も保存状態の良い石庫門建築群を、ブティックとレストランの街区に再生した場所。夜のライトアップ後は新天地より静かで撮影向きです。夕食は張園内のレストラン、または南京西路エリアまで戻れば選択肢がさらに広がります。</span></div>
+          <div class="meta"><span>★4.6（112<span class="zh">条评论</span><span class="ja">件</span>）</span><span><span class="zh">2号线南京西路站1号口出</span><span class="ja">2号線・南京西路駅1番出口</span></span></div>
+          <div class="trans-note">🚇 <span class="zh">回程：南京西路站搭2号线1站到静安寺，或步行约20分即可回住处。</span><span class="ja">帰り：南京西路駅から2号線で静安寺まで1駅。徒歩でも約20分で宿に戻れます。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.460096,31.228023&name=张园&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Zhangyuan+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== C案 ===== -->
+    <div class="rt-pane" id="rtC">
+      <div class="rt-sum"><b><span class="zh">C案・法租界 city walk 日</span><span class="ja">C案・仏租界シティウォークデー</span></b><br><span class="zh">愚园路（住处门口就是起点！）→ 安福路 → 乌鲁木齐中路 → 五原路 → 武康路 → 武康大楼 → 徐家汇。<b>全程梧桐树荫下步行约5km，不用搭一次地铁</b>，是最上海、最好拍的一天。</span><span class="ja">愚園路（宿の目の前が起点！）→ 安福路 → 烏魯木斉中路 → 五原路 → 武康路 → 武康大楼 → 徐家匯。<b>プラタナスの木陰を歩く全長約5km、地下鉄に一度も乗らないコース</b>。最も上海らしく、最も写真映えする一日です。</span></div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/A_brunch_spot_at_Anfu_Rd.jpg/960px-A_brunch_spot_at_Anfu_Rd.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#F3EBE2,#D9C3A8)">🌳</div><span class="t-time">9:00–11:00</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">愚园路 city walk（从住处出发）</span><span class="ja">愚園路シティウォーク（宿から出発）</span><span class="yomi">愚园路（ユーユエンルー）</span></h3>
+          <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・梧桐树＋花园洋房</span><span class="ja">必撮・プラタナス＋洋館</span></span></div>
+          <div class="desc"><span class="zh">我们住的愚园路本身就是老上海风情最浓的一条马路：两旁全是梧桐树与花园洋房，藏着不少名人故居，沿街有小众咖啡馆、独立书店与文创小店。往西走到<b>愚园路1008号</b>一带最有味道，逛累了随便找家店坐下喝杯咖啡，感受慢节奏的上海。</span><span class="ja">私たちが泊まる愚園路そのものが、老上海の風情が最も色濃く残る通り。両側にプラタナスと庭付き洋館が並び、著名人の旧居も点在。沿道には小さなカフェ、独立系書店、雑貨店が。西へ進んだ<b>愚園路1008号</b>あたりが特に趣があります。歩き疲れたら適当な店に入ってコーヒーを。上海のスローな一面を味わえます。</span></div>
+          <div class="tip">📸 <span class="zh">早上光线斜射进梧桐树缝最好拍，而且这个时段人少、还不热。从住处走出去就是，完全不用交通费。</span><span class="ja">朝はプラタナスの隙間から斜めに光が差し込み、撮影に最適。人も少なく涼しい時間帯です。宿を出ればすぐなので交通費もゼロ。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.43326,31.22322&name=愚园路1008号&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Yuyuan+Road+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/A_brunch_spot_at_Anfu_Rd.jpg/960px-A_brunch_spot_at_Anfu_Rd.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#F3EBE2,#D9C3A8)">🥐</div><span class="t-time">11:00–13:30</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--food)"><span class="zh">食物</span><span class="ja">グルメ</span></span><span class="zh">安福路 brunch → 乌鲁木齐中路 → 五原路</span><span class="ja">安福路でブランチ → 烏魯木斉中路 → 五原路</span><span class="yomi">安福路（アンフールー）・五原路（ウーユエンルー）</span></h3>
+          <div class="badges"><span class="bdg b-eat"><span class="zh">必吃・法式早午餐</span><span class="ja">必食・フレンチブランチ</span></span><span class="bdg b-buy"><span class="zh">必买・独立设计小店</span><span class="ja">必買・独立系ショップ</span></span></div>
+          <div class="desc"><span class="zh"><b>安福路</b>是上海的「网红马路」，年轻人超爱来，沿街有 BM、野兽派旗舰店与话剧艺术中心，常能碰到潮人街拍。午餐推荐 <b>RAC Coffee & Bar</b>（★4.5、人均约¥100、店员会英文），可丽饼与班尼迪克蛋很受好评。<br>接着转进 <b>乌鲁木齐中路</b>——比安福路清静，多巴胺色系的独立设计小店、复古买手店与街头涂鸦很好逛；再走 <b>五原路</b>，老洋房保存得好、人少清静，古着店与手作工坊藏在其中。</span><span class="ja"><b>安福路</b>は上海の「ネット人気ストリート」。若者に大人気で、BMや野獣派の旗艦店、話劇芸術センターが並び、street snapに出くわすことも。ランチは <b>RAC Coffee & Bar</b>（★4.5、一人約¥100、スタッフ英語可）がおすすめ。ガレットとエッグベネディクトが好評です。<br>続いて <b>烏魯木斉中路</b>へ——安福路より静かで、ドーパミンカラーの独立系ショップ、ヴィンテージセレクトショップ、ストリートアートが楽しい。さらに <b>五原路</b>は洋館の保存状態が良く人も少なめ。古着店やハンドメイド工房が隠れています。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.440092,31.21323&name=RAC安福路店&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=RAC+Coffee+Anfu+Road+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Wukang_Mansion%2C_Shanghai%2C_May_2016_01.JPG/960px-Wukang_Mansion%2C_Shanghai%2C_May_2016_01.JPG" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🏛️</div><span class="t-time">14:00–16:00</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">武康路 →武康大楼（＋宋庆龄故居）</span><span class="ja">武康路 → 武康大楼（＋宋慶齢旧居）</span><span class="yomi">武康大楼（ウーカン ダーロウ）</span></h3>
+          <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・船型公寓</span><span class="ja">必撮・船型アパート</span></span></div>
+          <div class="desc"><span class="zh">被誉为「上海第一花园马路」的武康路，沿街全是梧桐树与历史建筑，还有巴金故居、罗密欧阳台等打卡点，顺路也可以参观宋庆龄故居。终点的<b>武康大楼</b>是邬达克设计的船型建筑，法式红砖外墙配弧形转角，正面侧面都出片。</span><span class="ja">「上海第一の花園通り」と称される武康路。沿道はプラタナスと歴史的建築が続き、巴金旧居や「ロミオのバルコニー」などの撮影スポットも。宋慶齢旧居も立ち寄れます。終点の<b>武康大楼</b>はヒューデック設計の船型建築。フランス風の赤レンガ壁とカーブした角が特徴で、正面からも側面からも絵になります。</span></div>
+          <div class="tip">☀️ <span class="zh"><b>武康大楼白天去才好看！</b>和外滩相反——外滩适合晚上亮灯后，武康大楼则要晴天的阳光照射下才有味道，去之前先看一下天气页。</span><span class="ja"><b>武康大楼は昼に行ってこそ！</b>外灘とは逆で、外灘は夜のライトアップ後、武康大楼は晴れた日の陽光の下が一番。出発前に天気タブをチェックしてください。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.438326,31.20448&name=武康大楼&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Wukang+Mansion+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+
+      <div class="spot">
+        <div class="ph"><div class="grad" style="display:flex;background:linear-gradient(135deg,#EDF3FA,#C9D9EA)">⛪</div><span class="t-time">16:15–19:00</span></div>
+        <div class="bd">
+          <h3><span class="cat" style="background:var(--shop)"><span class="zh">购物</span><span class="ja">ショッピング</span></span><span class="zh">徐家汇（天主教堂＋商圈避暑＋晚餐）</span><span class="ja">徐家匯（大聖堂＋モールで避暑＋夕食）</span><span class="yomi">徐家汇（シュージャーフイ）</span></h3>
+          <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・哥德式双塔</span><span class="ja">必撮・ゴシックの双塔</span></span></div>
+          <div class="desc"><span class="zh">从武康大楼往南走约25分（或1号线1站）就到徐家汇。<b>徐家汇天主教堂（圣依纳爵主教座堂）</b>建于1906–1910年，是法国耶稣会士所建的哥德式双塔教堂，被称为「远东第一大教堂」，前庭广场绿意盎然，很好拍（★4.5・278条评论）。旁边就是徐家汇商圈——港汇恒隆、美罗城、汇金百货连成一片，冷气足、餐厅多，7人吃晚餐很好安排，逛完直接搭1号线或11号线回去。</span><span class="ja">武康大楼から南へ徒歩約25分（または1号線で1駅）で徐家匯へ。<b>徐家匯天主堂（聖イグナチオ大聖堂）</b>は1906〜1910年、フランス人イエズス会士により建てられたゴシック様式の双塔聖堂で「極東第一の大聖堂」と称されます。前庭の広場は緑豊かで撮影にも最適（★4.5・278件）。隣は徐家匯の商業エリア——港匯恒隆、美羅城、匯金百貨が連なり、冷房も効いてレストランも豊富。7名の夕食にも困りません。食後はそのまま1号線か11号線で帰路へ。</span></div>
+          <div class="tip">💡 <span class="zh">教堂内部开放时间不固定、有时闭门，但外观与广场随时可看。旁边的徐家汇书院（图书馆）也很有设计感，可以进去吹冷气顺便拍照。</span><span class="ja">聖堂内部の開放時間は不定で閉まっていることもありますが、外観と広場はいつでも見られます。隣の徐家匯書院（図書館）もデザイン性が高く、涼みがてら撮影スポットとしても◎。</span></div>
+          <div class="trans-note">🚇 <span class="zh">回程：徐家汇站搭1号线到常熟路转7号线1站到静安寺，约20分；或直接打车约15分・¥25。</span><span class="ja">帰り：徐家匯駅から1号線で常熟路、7号線に乗換え1駅で静安寺、約20分。またはタクシーで約15分・¥25。</span></div>
+          <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.4361,31.191164&name=徐家汇天主教堂&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=St+Ignatius+Cathedral+Xujiahui+Shanghai">Google Maps</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="memo"><label>📷 <span class="zh">上传今日旅记照片</span><span class="ja">今日の旅の写真をアップ</span><input type="file" accept="image/*" multiple onchange="addMemo(this,'m2')"></label><div class="strip" id="m2"></div></div>
+  </div>
+
+  <!-- ─────── DAY 3 ─────── -->
+  <div class="day-pane" id="day3">
+    <div class="wear">🎢 <b><span class="zh">建议穿着</span><span class="ja">服装アドバイス</span></b>：<span class="zh">排汗衣＋帽子＋防晒、最好走的鞋（一天会走2万步）。带水壶（园内有饮水机）、雨衣或折叠伞、行动电源。园内下午常有雷阵雨。</span><span class="ja">速乾ウェア＋帽子＋日焼け止め、最も歩きやすい靴（1日2万歩コース）。水筒（園内に給水機あり）、レインコートか折りたたみ傘、モバイルバッテリーも。園内は午後に雷雨が多いです。</span></div>
+
+    <div class="spot">
+      <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Enchanted_Storybook_Castle.jpg/960px-Enchanted_Storybook_Castle.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EDF3FA,#C9D9EA)">🏰</div><span class="t-time">8:30–21:30</span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--act)"><span class="zh">活动</span><span class="ja">アクティビティ</span></span><span class="zh">上海迪士尼乐园（全员・整天）</span><span class="ja">上海ディズニーランド（全員・終日）</span><span class="yomi">上海迪士尼乐园（シャンハイ ディーシーニー ラーユエン）</span></h3>
+        <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・奇幻童话城堡</span><span class="ja">必撮・エンチャンテッド・ストーリーブック・キャッスル</span></span><span class="bdg b-buy"><span class="zh">必买・玲娜贝儿周边</span><span class="ja">必買・リーナ・ベル グッズ</span></span></div>
+        <div class="desc"><span class="zh">全世界最大的迪士尼城堡就在这里。必玩：创极速光轮 TRON（全球最快迪士尼过山车）、加勒比海盗（沉浸式技术天花板）、七个小矮人矿山车、飞跃地平线。晚上20:30 有城堡烟花与灯光秀，是一天的高潮。</span><span class="ja">世界最大のディズニー・キャッスルがここに。必乗：トロン・ライトサイクル・パワーラン（世界最速のディズニーコースター）、カリブの海賊（没入型演出の最高峰）、七人のこびとのマイントレイン、ソアリン。夜20:30からはキャッスルの花火＆ライトショーがクライマックスです。</span></div>
+        <div class="meta"><span>★4.5</span><span><span class="zh">平日约¥475起</span><span class="ja">平日約¥475〜</span></span><span><span class="zh">平日 8:30–21:30</span><span class="ja">平日 8:30–21:30</span></span></div>
+        <div class="trans-note">🚇 <span class="zh">去程：2号线静安寺→广兰路（同月台换乘）→11号线迪士尼站，全程约75分（¥7）。7:00 从住处出发，8:00 前到闸口最理想。回程人潮很挤，也可打车约60分／¥180（分2台）。</span><span class="ja">行き：2号線・静安寺→広蘭路（同ホーム乗換）→11号線・迪士尼駅、所要約75分（¥7）。7:00に宿を出発、8:00前にゲート着が理想。帰りは大混雑するので、タクシー約60分／¥180（2台に分乗）も選択肢です。</span></div>
+        <div class="tip">🎫 <span class="zh">攻略：①门票请提前在官方 App／小程序实名购买 ②开园前1小时到闸口，入园后先冲 TRON ③午后雷阵雨时室内项目排队反而变短，是好时机 ④想省排队时间可考虑「尊享卡」 ⑤烟花结束后地铁会爆满，建议提前15分钟移动或留在迪士尼小镇吃宵夜错峰。</span><span class="ja">攻略：①チケットは公式アプリ／ミニプログラムで実名事前購入を ②開園1時間前にゲート着、入園後はまずトロンへ ③午後の雷雨時は屋内アトラクションの待ち時間が逆に短くなるチャンス ④待ち時間短縮なら「プレミアアクセス」も検討を ⑤花火終了後の地下鉄は大混雑。15分前に移動を始めるか、ディズニータウンで夜食を取って混雑をやり過ごすのが賢明。</span></div>
+        <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.657871,31.143397&name=上海迪士尼乐园&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Shanghai+Disneyland">Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="rt-lead">🙋 <span class="zh"><b>不去迪士尼的伙伴：</b>可以走第二天没选到的那条路线（A／B／C案），行程与导航都已经写在「8/4」分页里，直接照着走就好。晚上约在住处会合即可。</span><span class="ja"><b>ディズニーに行かないメンバーへ：</b>2日目に選ばなかったコース（A／B／C案）をそのまま回るのがおすすめ。行程もナビリンクも「8/4」タブに揃っています。夜は宿で合流しましょう。</span></div>
+
+    <div class="memo"><label>📷 <span class="zh">上传今日旅记照片</span><span class="ja">今日の旅の写真をアップ</span><input type="file" accept="image/*" multiple onchange="addMemo(this,'m3')"></label><div class="strip" id="m3"></div></div>
+  </div>
+
+  <!-- ─────── DAY 4 ─────── -->
+  <div class="day-pane" id="day4">
+    <div class="wear">🧳 <b><span class="zh">建议穿着</span><span class="ja">服装アドバイス</span></b>：<span class="zh">轻松好活动的衣服；机场与机舱冷气强，手提行李放一件薄外套。液体类记得收进托运。</span><span class="ja">動きやすい楽な服装で。空港と機内は冷房が強いので薄手の羽織りを手荷物に。液体類は預け荷物へ忘れずに。</span></div>
+
+    <div class="rt-lead">🔀 <span class="zh"><b>今天分成三批走，请先确认自己是哪一批：</b><br><br><b>Ⓐ 早班机组</b>｜博源 → MU539 浦东 T1 <b>14:30</b><br>　11:30 前要到机场，<b>最晚 10:15 出发</b>，上午行程走完就直接去浦东。<br><b>Ⓑ 晚班机组</b>｜龍 → HO1385 浦东 <b>18:40</b>（22:30 抵羽田）<br>　15:40 前到机场即可，<b>14:15 前后出发</b>就好。上午行程之外还能吃午餐、逛久光买伴手礼，行李先寄在住处或静安嘉里中心 B1（免费）。<br><b>Ⓒ 虹桥高铁组</b>｜继续到其他城市玩的伙伴<br>　2号线静安寺直达虹桥火车站约38分，请依车次往前抓 <b>60–90分</b>。<br><br>三批的上午行程一样：7:30 早餐 → 8:15 静安寺 → 9:00 张园 → 10:00 回住处取行李退房（退房时限12:00）。</span><span class="ja"><b>本日は3班に分かれます。まず自分がどれか確認を：</b><br><br><b>Ⓐ 早い便の組</b>｜博源 → MU539 浦東T1 <b>14:30</b><br>　11:30までに空港着が必要。<b>遅くとも10:15出発</b>。午前の行程を終えたらそのまま浦東へ。<br><b>Ⓑ 遅い便の組</b>｜龍 → HO1385 浦東 <b>18:40</b>（22:30羽田着）<br>　15:40までに空港着でOKなので、<b>14:15頃の出発</b>で十分。午前の行程に加えてランチや久光でのお土産探しも楽しめます。荷物は宿か静安嘉里中心B1（無料）に預けて身軽に。<br><b>Ⓒ 虹橋・高鉄組</b>｜他都市へ旅を続けるメンバー<br>　2号線・静安寺から虹橋火車站まで直通約38分。列車の時刻から<b>60〜90分前</b>を目安に。<br><br>午前中の行程は3班とも共通：7:30 朝食 → 8:15 静安寺 → 9:00 張園 → 10:00 宿に戻って荷物回収・チェックアウト（期限12:00）。</span></div>
+
+    <div class="spot">
+      <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/2019-02-22_Xiaolongbao_in_%22Taste_Of_Shanghai%22_restaurant%2C_Sydney%2C_Australia.jpg/960px-2019-02-22_Xiaolongbao_in_%22Taste_Of_Shanghai%22_restaurant%2C_Sydney%2C_Australia.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FDF3E3,#F5D9A8)">🥟</div><span class="t-time">7:30–8:15</span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--food)"><span class="zh">食物</span><span class="ja">グルメ</span></span><span class="zh">最后一顿上海早餐</span><span class="ja">最後の上海の朝ごはん</span><span class="yomi">早饭（ザオファン）・生煎（ションジエン）</span></h3>
+        <div class="badges"><span class="bdg b-eat"><span class="zh">必吃・汤包与豆浆</span><span class="ja">必食・湯包と豆乳</span></span></div>
+        <div class="desc"><span class="zh">静安寺周边选择很多：久光百货 B1 美食区、小杨生煎（南京西路一带）、或街边的锅贴＋咸豆浆组合（人均¥15）。想再吃一次汤包，可以坐2号线2站到黄河路的佳家汤包（★4.3，1177条评论）。</span><span class="ja">静安寺周辺は選択肢豊富：久光百貨店B1のフードエリア、小楊生煎（南京西路一帯）、あるいは街角の焼き餃子＋塩豆乳の組み合わせ（一人¥15ほど）。もう一度湯包を食べたいなら、2号線で2駅、黄河路の佳家湯包（★4.3、1,177件）へ。</span></div>
+        <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.470821,31.234577&name=佳家汤包黄河路店&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Jia+Jia+Tang+Bao+Huanghe+Road+Shanghai">Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Jing%27an_Temple_Shanghai_11.jpg/960px-Jing%27an_Temple_Shanghai_11.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">⛩️</div><span class="t-time">8:15–9:00</span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">静安寺参拜（早晨最舒服的时段）</span><span class="ja">静安寺参拝（朝が一番心地よい時間）</span><span class="yomi">静安寺（ジンアンスー）・久光百货（ジウグアン バイフォ）</span></h3>
+        <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・金顶×摩天楼</span><span class="ja">必撮・金の屋根×高層ビル</span></span><span class="bdg b-buy"><span class="zh">必买・茶叶・大白兔・零食</span><span class="ja">必買・茶葉・大白兎・スナック</span></span></div>
+        <div class="desc"><span class="zh">7:30 就开门，早上八点多的静安寺人少、气温也还没上来，是四天里最舒服的一次参拜。金色屋顶在晨光下特别亮，与背后的玻璃大楼形成新旧对比，很好拍。就在住处走路5分钟的距离，完全不用赶。</span><span class="ja">7:30開門。朝8時台の静安寺は人が少なく気温もまだ上がりきらず、4日間で一番心地よい参拝になります。朝日を浴びた金色の屋根がひときわ輝き、背後のガラス張りの高層ビルとの新旧の対比が絶好の被写体。宿から徒歩5分なので、急ぐ必要はまったくありません。</span></div>
+        <div class="meta"><span>★4.5</span><span>¥50</span><span>7:30–17:00</span></div>
+        <div class="tip">💡 <span class="zh"><b>伴手礼怎么办？</b>久光百货与静安嘉里中心 10:00 才开门。<b>Ⓐ组（14:30 班机）</b>赶不上，建议第二天先买好或在浦东 T1 免税店解决；<b>Ⓑ组（18:40 班机）与Ⓒ高铁组</b>时间充裕，10:00 后正好可以慢慢逛，B1 超市大白兔、茶叶、零食一次买齐。</span><span class="ja"><b>お土産はどうする？</b>久光百貨店も静安嘉里中心も開店は10:00。<b>Ⓐ組（14:30便）</b>は間に合わないので2日目に買っておくか浦東T1の免税店で。<b>Ⓑ組（18:40便）とⒸ高鉄組</b>は時間に余裕があるので、10:00以降にゆっくりどうぞ。B1のスーパーで大白兎・茶葉・お菓子が一度に揃います。</span></div>
+        <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.445284,31.223519&name=静安寺&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Jing'an+Temple+Shanghai">Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/A_Type_of_Shikumen_Gable_in_ZhangYuan_Shanghai.JPG/960px-A_Type_of_Shikumen_Gable_in_ZhangYuan_Shanghai.JPG" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🏘️</div><span class="t-time">9:00–9:45</span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">张园（威海路590弄・石库门建筑群）</span><span class="ja">張園（威海路590弄・石庫門建築群）</span><span class="yomi">张园（ジャンユエン）・石库门（シークーメン）</span></h3>
+        <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・山墙与弄堂</span><span class="ja">必撮・切妻壁と路地</span></span><span class="bdg b-buy"><span class="zh">必买・中国首店限定品</span><span class="ja">必買・中国1号店の限定品</span></span></div>
+        <div class="desc"><span class="zh">1882年的「海上第一名园」，共42栋170幢1920–30年代历史建筑，是上海现存规模最大、保存最完整的石库门建筑群，被称为活着的「石库门博物馆」。修缮后成为精品街区，进驻不少国际品牌与中国首店；<b>东区首开区已于2026年6月底开放</b>，可逛的范围更大了。清晨人少、光线斜射进弄堂时最好拍。</span><span class="ja">1882年創建の「海上第一名園」。1920〜30年代の歴史的建築が42棟170幢あり、上海に現存する最大規模かつ最も保存状態の良い石庫門建築群で、「生きた石庫門博物館」とも呼ばれます。修復後はブティック街区として再生し、国際ブランドや中国1号店が多数出店。<b>東区の先行エリアも2026年6月末に開放</b>され、歩ける範囲がさらに広がりました。朝は人が少なく、斜めの光が路地に差し込む時間帯が撮影のベストタイミング。</span></div>
+        <div class="meta"><span>★4.6（112<span class="zh">条评论</span><span class="ja">件</span>）</span><span><span class="zh">街区免费・店铺约10:00–22:00</span><span class="ja">街区は無料・店舗は約10:00–22:00</span></span><span><span class="zh">2号线南京西路站1／13号口</span><span class="ja">2号線・南京西路駅 1／13番口</span></span></div>
+        <div class="tip">📸 <span class="zh">拍照tips：石库门的「山墙」（三角形砖砌墙面）是最有特色的构图元素，站在弄堂尽头往回拍，两侧砖墙会形成天然的框景。部分展览空间需要在小程序上预约，纯逛街区则可自由进出。</span><span class="ja">撮影tips：石庫門の「切妻壁」（三角形のレンガ壁）が最も特徴的な構図要素。路地の突き当たりから振り返って撮ると、両側のレンガ壁が自然な額縁になります。一部の展示スペースはミニプログラムでの予約が必要ですが、街区の散策自体は自由に出入りできます。</span></div>
+        <div class="trans-note">🚇 <span class="zh">2号线静安寺→南京西路1站（约3分），或从住处直接步行约18分。</span><span class="ja">2号線で静安寺→南京西路まで1駅（約3分）、宿から徒歩でも約18分。</span></div>
+        <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.460096,31.228023&name=张园&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Zhangyuan+Shanghai">Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="ph"><div class="grad" style="display:flex;background:linear-gradient(135deg,#EDF3FA,#C9D9EA)">🧳</div><span class="t-time">10:00–10:15</span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--trans)"><span class="zh">交通</span><span class="ja">交通</span></span><span class="zh">取行李・退房 → 出发浦东（行李寄放攻略）</span><span class="ja">荷物回収・チェックアウト → 浦東へ（荷物預けガイド）</span><span class="yomi">行李寄存（シンリー ジーツン）＝荷物預かり</span></h3>
+        <div class="desc"><span class="zh"><b>今天的走法：</b>行李先留在住处，8:15–9:45 轻装去静安寺与张园，10:00 回来取行李退房（退房时限12:00，但今天10:15 就要出发）。<b>Ⓐ组（14:30 班机）用不到寄存柜</b>；<b>Ⓑ组（18:40 班机）与Ⓒ高铁组</b>退房后还想在市区逛，就用下面的方式寄放。<br><br><b>① 最省事：住处寄放</b>（免费）<br>退房后仍可把行李留在住处，请事先在微信群里跟房东说一声。<br><br><b>② 最推荐的柜子：静安嘉里中心 B1</b>（免费）<br>2号线静安寺站出站即到、离住处走路5分，柜子可放28寸行李箱，营业10:00–22:00。<br><br><b>③ 地铁2号线车站寄存柜</b>（付费・在闸内付费区）<br>可用站点包含：静安寺、南京西路、人民广场、南京东路、陆家嘴、龙阳路、虹桥2号航站楼、上海科技馆等。<br>费用：小柜¥2/时、中柜¥4/时、大柜¥5/时；24小时封顶为¥12／¥24／¥30，单次最长24小时、免押金。<br>尺寸：中柜可放20寸、大柜可放28寸。<br>操作：扫柜上二维码进入「小铁寄存柜」或「丰巢」微信小程序，需先绑好支付。</span><span class="ja"><b>① 一番ラク：ホテル預け</b>（無料）<br>チェックアウト後もフロントに荷物を預け、午後に受け取れます。7名分は量が多いので、前夜のうちにフロントへ一声かけておくと安心。<br><br><b>② イチオシのロッカー：静安嘉里中心 B1</b>（無料）<br>2号線・静安寺駅直結、宿から徒歩5分。28インチのスーツケースも入り、営業は10:00–22:00。<br><br><b>③ 地下鉄2号線 駅構内のロッカー</b>（有料・改札内エリア）<br>利用可能駅：静安寺、南京西路、人民広場、南京東路、陸家嘴、龍陽路、虹橋第2ターミナル、上海科技館ほか。<br>料金：小¥2/時、中¥4/時、大¥5/時。24時間上限は¥12／¥24／¥30、1回最長24時間・デポジット不要。<br>サイズ：中は20インチ、大は28インチ対応。<br>使い方：ロッカーのQRを読み「小鉄寄存柜」または「丰巢」のWeChatミニプログラムへ。事前の決済設定が必要です。</span></div>
+        <div class="tip">⚠️ <span class="zh">注意：地铁寄存柜早上9点后热门站（人民广场、豫园）常常全满，且小程序界面只有中文、需要中国支付。日本伙伴单独行动时，还是走「住处寄放」或「嘉里中心免费柜」最稳。</span><span class="ja">注意：地下鉄のロッカーは朝9時を過ぎると人気駅（人民広場・豫園）は満杯になりがち。ミニプログラムは中国語のみ・中国系決済が必要です。日本メンバーが単独行動する場合は「宿に預ける」か「嘉里中心の無料ロッカー」が確実。</span></div>
+        <div class="trans-note">🚇 <span class="zh">2号线从静安寺可直达：虹桥T2约35分、虹桥火车站约38分、浦东机场约80–90分（广兰路可能需换乘）。行李多时打车更轻松。</span><span class="ja">2号線は静安寺から直通：虹橋T2まで約35分、虹橋駅まで約38分、浦東空港まで約80–90分（広蘭路で乗換の場合あり）。荷物が多いならタクシーが断然ラクです。</span></div>
+        <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.449176,31.223142&name=静安嘉里中心&coordinate=wgs84">高德导航（<span class="zh">嘉里中心</span><span class="ja">嘉里中心</span>）</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Jing+An+Kerry+Centre+Shanghai">Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/A_maglev_train_coming_out%2C_Pudong_International_Airport%2C_Shanghai.jpg/960px-A_maglev_train_coming_out%2C_Pudong_International_Airport%2C_Shanghai.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EEF3F8,#C9D9EA)">✈️</div><span class="t-time">10:15–14:30</span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--trans)"><span class="zh">Ⓐ／Ⓑ 回东京组 → 浦东机场</span><span class="ja">Ⓐ／Ⓑ 東京へ帰る組 → 浦東空港</span></span><span class="zh">MU539・HO1385 回程</span><span class="ja">MU539・HO1385で帰国</span><span class="yomi">浦东机场（プードン ジーチャン）</span></h3>
+        <div class="desc"><span class="zh"><b>Ⓐ MU539（中国东方航空）浦东 T1 14:30 → 羽田 T3 18:30</b>（约3小时）・博源<br>　10:15 出发 → 11:30 到 T1<br><b>Ⓑ HO1385（吉祥航空）浦东 18:40 → 羽田 22:30</b>（约2小时50分）・龍<br>　14:15 出发 → 15:30 到，午后还有大把时间<br><br>Ⓐ组 10:15 从住处出发，打车约60分・约¥170（7人分2台）／地铁2号线约90分・¥8。11:30 抵达 T1，办理登机与出境，12:30 前完成最保险。</span><span class="ja"><b>Ⓐ MU539（中国東方航空）浦東T1 14:30 → 羽田T3 18:30</b>（約3時間）・博源<br>　10:15出発 → 11:30にT1着<br><b>Ⓑ HO1385（吉祥航空）浦東 18:40 → 羽田 22:30</b>（約2時間50分）・龍<br>　14:15出発 → 15:30着。午後はまだたっぷり時間があります<br><br>Ⓐ組は10:15に宿を出発。タクシー約60分・約¥170（7名なら2台に分乗）／地下鉄2号線で約90分・¥8。11:30にT1着、チェックインと出国手続きを12:30までに終えられれば万全です。</span></div>
+        <div class="tip">🗺️ <span class="zh">出租车／磁悬浮／地铁三种走法的详细比较，请见「<b>指南 → 机场・车站 ⇄ 住处 交通指引</b>」。</span><span class="ja">タクシー／リニア／地下鉄の3ルート比較は「<b>ガイド → 空港・駅 ⇄ 宿 アクセスガイド</b>」に詳しく載せています。</span></div>
+        <div class="tip">💡 <span class="zh">想省时间又好玩：搭2号线到龙阳路转磁悬浮，龙阳路→浦东机场只要8分钟、时速300km，单程¥50，当作最后一个景点。但行李多、人多时，直接打车还是最轻松。</span><span class="ja">時短かつ楽しむなら：2号線で龍陽路まで行きリニアに乗り換え。龍陽路→浦東空港はわずか8分・時速300km・片道¥50、最後のアトラクションとして最高です。ただし荷物と人数が多い日は、素直にタクシーが一番ラク。</span></div>
+        <div class="tip">📌 <span class="zh">出发前确认：护照、登机凭证、行动电源放随身（不可托运）、液体收进托运、退税或发票留好、把住处钥匙与门禁卡放回密码盒。</span><span class="ja">出発前チェック：パスポート、搭乗券、モバイルバッテリーは手荷物へ（預け入れ不可）、液体類は預け荷物へ、レシート類の保管、宿の鍵と入館カードはキーボックスへ返却。</span></div>
+        <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.805278,31.143333&name=浦东国际机场T1&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Shanghai+Pudong+International+Airport+Terminal+1">Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="ph"><div class="grad" style="display:flex;background:linear-gradient(135deg,#EFF5EC,#CBDFC4)">🚄</div><span class="t-time"><span class="zh">依高铁时间</span><span class="ja">高鉄の時刻次第</span></span></div>
+      <div class="bd">
+        <h3><span class="cat" style="background:var(--act)"><span class="zh">Ⓑ 虹桥高铁组 → 继续旅行</span><span class="ja">Ⓑ 虹橋・高鉄組 → 旅の続きへ</span></span><span class="zh">上海虹桥站（高铁）</span><span class="ja">上海虹橋駅（高鉄）</span><span class="yomi">虹桥火车站（ホンチャオ フォチョージャン）</span></h3>
+        <div class="desc"><span class="zh">虹桥站离住处比浦东近很多，时间比较宽裕，上午可以照常走静安寺与张园的行程。<br><br><b>交通</b>：2号线静安寺 →「虹桥火车站」站直达，约38分・¥7（同一条线不用换乘，行李多也不算太吃力）；打车约30分・¥70–90（7人需分车）。<br><b>进站</b>：国内高铁一般提前30分到站即可，但虹桥站非常大、从地铁到候车厅与月台要走一段，<b>建议抓发车前60–90分抵达</b>。<br><b>证件</b>：外国护照请走人工验票口（自助闸机多半只认中国身分证），需要多留一点时间。</span><span class="ja">虹橋駅は宿から浦東よりずっと近く、時間に余裕があります。午前中は静安寺・張園の行程をそのまま楽しめます。<br><br><b>アクセス</b>：2号線・静安寺 →「虹橋火車站」駅まで直通、約38分・¥7（乗換なしなので荷物が多くても比較的ラク）。タクシーなら約30分・¥70–90（7名なら分乗）。<br><b>入場</b>：国内高鉄は通常30分前で問題ありませんが、虹橋駅は非常に広く、地下鉄から待合ホール・ホームまでかなり歩きます。<b>発車60〜90分前の到着が安心</b>。<br><b>証明書</b>：外国パスポートは有人改札へ（自動改札は中国の身分証にしか対応していないことが多い）。少し時間に余裕を。</span></div>
+        <div class="tip">🎫 <span class="zh">高铁票请先在12306官网／App 或携程等平台用护照实名购票；取票或直接刷护照进站依车站规定，第一次搭建议早点到、找工作人员协助。</span><span class="ja">高鉄のきっぷは12306の公式サイト／アプリ、またはTrip.comなどでパスポートによる実名購入を。発券かパスポート直接タッチかは駅の運用次第なので、初めてなら早めに着いてスタッフに聞くのが確実です。</span></div>
+        <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.32,31.19472&name=上海虹桥火车站&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Shanghai+Hongqiao+Railway+Station">Google Maps</a></div>
+      </div>
+    </div>
+    <div class="memo"><label>📷 <span class="zh">上传今日旅记照片</span><span class="ja">今日の旅の写真をアップ</span><input type="file" accept="image/*" multiple onchange="addMemo(this,'m4')"></label><div class="strip" id="m4"></div></div>
+  </div>
+
+  <!-- ─────── 自由追加スポット ─────── -->
+  <h2 style="margin-top:28px"><span class="zh">✨ 时间有余裕的话（自由追加）</span><span class="ja">✨ 時間に余裕があれば（自由追加スポット）</span></h2>
+  <div class="spot">
+    <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Starbucks_Reserve_Roastery_Shanghai_01.jpg/960px-Starbucks_Reserve_Roastery_Shanghai_01.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#F3EBE2,#D9C3A8)">☕</div><span class="t-time">9:00–23:00</span></div>
+    <div class="bd">
+      <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">星巴克臻选烘焙工坊（南京西路789号）</span><span class="ja">スターバックス リザーブ ロースタリー上海</span><span class="yomi">星巴克烘焙工坊（シンバーカー ホンベイ ゴンファン）</span></h3>
+      <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・巨型铜罐烘豆</span><span class="ja">必撮・巨大銅釜ロースター</span></span><span class="bdg b-buy"><span class="zh">必买・上海限定杯</span><span class="ja">必買・上海限定タンブラー</span></span></div>
+      <div class="desc"><span class="zh">曾是全球最大的星巴克，与其说是咖啡店更像「咖啡主题乐园」：两层楼挑高空间、头顶铜管运送咖啡豆、现场烘豆表演，还有普通门市喝不到的臻选特调（氮气冷萃、咖啡鸡尾酒）与烘焙坊面包。隔壁就是船型的 LV 旗舰店，一起拍很好看。</span><span class="ja">かつて世界最大だったスターバックス。カフェというより「コーヒーのテーマパーク」：2階建ての吹き抜け空間、頭上の銅管を流れるコーヒー豆、目の前での焙煎ショー。通常店舗にはないリザーブ限定ドリンク（ナイトロコールドブリュー、コーヒーカクテル）やベーカリーも。隣は船型のルイ・ヴィトン旗艦店で、一緒に撮ると映えます。</span></div>
+      <div class="meta"><span>★4.5（745<span class="zh">条评论</span><span class="ja">件</span>）</span><span>9:00–23:00</span><span><span class="zh">住处地铁2号线2站（南京西路站）／打车约10分</span><span class="ja">宿から2号線2駅（南京西路駅）／タクシー約10分</span></span></div>
+      <div class="tip">💡 <span class="zh">周末排队入场很常见，建议平日上午或晚上8点后去；很适合安排在 Day1 晚上或 Day4 早上顺路。</span><span class="ja">週末は入場待ちの列ができることも。平日午前か20時以降が狙い目。Day1の夜かDay4の朝に組み込むのがおすすめ。</span></div>
+      <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.4614034,31.2305679&name=星巴克臻选烘焙工坊&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Starbucks+Reserve+Roastery+Shanghai">Google Maps</a></div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Passage_in_Tianzifang_Area.jpg/960px-Passage_in_Tianzifang_Area.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🏮</div><span class="t-time"><span class="zh">全天</span><span class="ja">終日</span></span></div>
+    <div class="bd">
+      <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">田子坊（泰康路210弄）</span><span class="ja">田子坊（石庫門の路地アート街）</span><span class="yomi">田子坊（ティエンズーファン）</span></h3>
+      <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・弄堂红灯笼</span><span class="ja">必撮・路地の赤提灯</span></span><span class="bdg b-buy"><span class="zh">必买・文创小物</span><span class="ja">必買・雑貨みやげ</span></span></div>
+      <div class="desc"><span class="zh">石库门老弄堂改造的迷宫式文创街区：手作小店、丝巾、茶叶、大白兔奶糖专卖店和小咖啡馆挤在窄巷里，很好逛也很好拍。适合和新天地二选一，或加进第二天的 B案／C案路线里（10号线打浦桥站，离新天地只有1站）。</span><span class="ja">石庫門の古い路地を改装した迷路のようなアート＆雑貨エリア。手作りの店、シルク、茶葉、大白兎ミルクキャンディ専門店、小さなカフェが細い路地にぎっしり。散策も写真も楽しい。新天地とどちらか、あるいは2日目のB案・C案に追加するのも◎（10号線・打浦橋駅、新天地から1駅）。</span></div>
+      <div class="meta"><span>★4.2（2,018<span class="zh">条评论</span><span class="ja">件</span>）</span><span><span class="zh">店铺约10:00–21:00</span><span class="ja">店舗は約10:00–21:00</span></span><span><span class="zh">地铁9号线打浦桥站对面</span><span class="ja">9号線・打浦橋駅の目の前</span></span></div>
+      <div class="tip">📸 <span class="zh">上午10点前人最少，逛起来最舒服；巷子里没冷气、8月中午会很闷热，早上或傍晚去为佳。</span><span class="ja">午前10時前が一番空いていて快適。路地に冷房はなく8月の昼は蒸し暑いので、朝か夕方がベスト。</span></div>
+      <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.468898,31.208812&name=田子坊&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Tianzifang+Shanghai">Google Maps</a></div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Shanghai_Museum_exterior_3.jpg/960px-Shanghai_Museum_exterior_3.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EDF3FA,#C9D9EA)">🏛️</div><span class="t-time">9:00–17:00</span></div>
+    <div class="bd">
+      <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">上海博物馆（人民广场）</span><span class="ja">上海博物館（人民広場）</span><span class="yomi">上海博物馆（シャンハイ ボーウーグワン）</span></h3>
+      <div class="badges"><span class="bdg b-photo"><span class="zh">免费・避暑好去处</span><span class="ja">無料・暑さしのぎに最適</span></span></div>
+      <div class="desc"><span class="zh">「上圆下方」造型的地标博物馆，青铜器、陶瓷、书画、印章馆藏一流，而且免费！8月午后雷雨或太热的时候，进来吹冷气看国宝是完美备案。<br><br><b>两个馆别搞错：</b>人民广场的<b>本馆</b>需预约、周一闭馆；浦东的<b>东馆免费且不需预约</b>，在 B1 入口刷证件直接进，但<b>每周二闭馆</b>（8/4 正好是周二，要去东馆请避开）。</span><span class="ja">「天円地方」の形をしたランドマーク的博物館。青銅器・陶磁器・書画・印章のコレクションは一級品で、しかも無料！8月の午後の雷雨や猛暑時に、冷房の効いた館内で国宝鑑賞は完璧なプランB。<br><br><b>2つの館を混同しないよう注意：</b>人民広場の<b>本館</b>は要予約・月曜休館。浦東の<b>東館は無料かつ予約不要</b>で、B1入口で身分証をかざせば入れますが<b>毎週火曜休館</b>（8/4はまさに火曜なので、東館狙いなら避けてください）。</span></div>
+      <div class="meta"><span>★4.3（1,296<span class="zh">条评论</span><span class="ja">件</span>）</span><span>9:00–17:00</span><span><span class="zh">周一常闭馆</span><span class="ja">月曜は休館が多い</span></span></div>
+      <div class="tip">📌 <span class="zh">本馆免费但需在官方公众号预约，外国护照可现场凭护照登记入场（建议先预约保险）。东馆免预约、刷证件即可进，但周二闭馆、勿跑空。</span><span class="ja">本館は無料ですが公式アカウントでの事前予約制（外国パスポートは当日窓口登録でも入れる場合あり、予約が安心）。東館は予約不要で身分証をかざせば入場可、ただし火曜休館なので空振りにご注意を。</span></div>
+      <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.4755278,31.2283307&name=上海博物馆&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Shanghai+Museum+People's+Square">Google Maps</a></div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="ph"><div class="grad" style="display:flex;background:linear-gradient(135deg,#EFF5EC,#CBDFC4)">🏡</div><span class="t-time"><span class="zh">全天</span><span class="ja">終日</span></span></div>
+    <div class="bd">
+      <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">思南公馆・思南路（老洋房街区）</span><span class="ja">思南公館・思南路（洋館ストリート）</span><span class="yomi">思南公馆（スーナン ゴングワン）</span></h3>
+      <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・老洋房＋绿植</span><span class="ja">必撮・洋館＋緑</span></span></div>
+      <div class="desc"><span class="zh">由修复后的老洋房改造而成的文化街区，充满海派风情。<b>比起武康路，这里更低调奢华、人也少很多</b>，有特色餐厅、文创小店，还常办文化活动与快闪店。老洋房搭配绿植，拍照非常出片，适合悠闲地走走逛逛。就在新天地旁边（步行约15分），可以和 B案下午的行程串起来。</span><span class="ja">修復された洋館群を文化ストリートに再生したエリアで、上海独特の「海派」の風情が漂います。<b>武康路よりも落ち着いた高級感があり、人もずっと少なめ</b>。個性的なレストランや雑貨店が並び、文化イベントやポップアップも頻繁。洋館と緑の組み合わせは写真映え抜群で、のんびり散策するのに最適です。新天地のすぐ隣（徒歩約15分）なので、B案の午後に組み込むのも◎。</span></div>
+      <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.46840,31.21463&name=思南公馆&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=Sinan+Mansions+Shanghai">Google Maps</a></div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="ph"><div class="grad" style="display:flex;background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🧱</div><span class="t-time">9:00–17:00</span></div>
+    <div class="bd">
+      <h3><span class="cat" style="background:var(--spot)"><span class="zh">景点</span><span class="ja">スポット</span></span><span class="zh">1933 老场坊</span><span class="ja">1933老場坊</span><span class="yomi">1933老场坊（ラオチャンファン）</span></h3>
+      <div class="badges"><span class="bdg b-photo"><span class="zh">必拍・工业风迷宫</span><span class="ja">必撮・インダストリアル迷宮</span></span></div>
+      <div class="desc"><span class="zh">始建于1933年的原屠宰场改建园区，建筑融汇东西方特色，可见古罗马巴西利卡式风格，水泥廊桥交错像立体迷宫，拍照非常有感觉、非常工业风。地方不大，约1小时逛完，适合喜欢建筑与冷调照片的人。在虹口区，离市中心稍远，是「有多的半天」才安排的选项。</span><span class="ja">1933年建造の元屠畜場をリノベした複合施設。東西の建築様式が融合し、古代ローマのバシリカ風の意匠も。コンクリートの渡り廊下が立体迷路のように交錯し、インダストリアルな写真が撮り放題。規模は大きくなく1時間ほどで回れます。建築好き・クールなトーンの写真好き向け。虹口区にあり中心部からやや遠いので、半日余った時の選択肢に。</span></div>
+      <div class="btns"><a class="btn btn-g" target="_blank" href="https://uri.amap.com/marker?position=121.48156,31.25611&name=1933老场坊&coordinate=wgs84">高德导航</a><a class="btn btn-a" target="_blank" href="https://maps.google.com/?q=1933+Old+Millfun+Shanghai">Google Maps</a></div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- ══════════ TAB 2 美食 ══════════ -->
+<div class="tab" id="tab-food">
+<div class="wrap">
+  <h2><span class="zh">必吃清单・生煎与蟹黄</span><span class="ja">必食リスト・生煎＆カニ味噌</span></h2>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/2022-09-03_Sheng_Jian_Bao_-_Shanghai_Pan-Fried_Pork_Buns.jpg/960px-2022-09-03_Sheng_Jian_Bao_-_Shanghai_Pan-Fried_Pork_Buns.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FDF3E3,#F5D9A8)">🥟</div></div>
+    <div class="fb"><h4><span class="zh">小杨生煎（吴江路店）</span><span class="ja">小楊生煎・呉江路店</span> <span class="stars">★4.0 (95)</span><span class="yomi">小杨生煎（シャオヤン ションジエン）</span></h4>
+    <div class="menu"><span class="zh">鲜肉生煎 4只 ¥12｜虾仁生煎 4只 ¥22｜小馄饨 ¥13</span><span class="ja">鮮肉生煎4個 ¥12｜エビ生煎4個 ¥22｜ミニワンタン ¥13</span></div>
+    <div class="desc"><span class="zh">皮薄底脆、汤汁超多的上海生煎代表，点单快、翻桌快。</span><span class="ja">薄皮×カリカリの底×たっぷり肉汁。上海の生煎を代表する店で、提供も回転も速い。</span></div>
+    <div class="rv"><span class="zh">游客评价：汤汁多到爆，先咬小口再吸，猪肉口味最推。</span><span class="ja">旅行者の声：スープがあふれるほど。まず小さくかじって吸うのがコツ。豚肉味が一番おすすめ。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.459284,31.229081&name=小杨生煎吴江路店&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Yang's+Fried+Dumplings+Wujiang+Road">Google Maps</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/2009-03-21_Shengjian_mantou_vendor_at_Shilin_Night_Market.jpg/960px-2009-03-21_Shengjian_mantou_vendor_at_Shilin_Night_Market.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FDF3E3,#EDCB8C)">🍳</div></div>
+    <div class="fb"><h4><span class="zh">大壶春（云南南路总店）</span><span class="ja">大壺春・雲南南路本店</span> <span class="stars">★4.0 (131)</span><span class="yomi">大壶春（ダーフーチュン）</span></h4>
+    <div class="menu"><span class="zh">经典鲜肉生煎 ¥12/4只｜蟹粉生煎 ¥28/4只｜咖喱牛肉汤 ¥15</span><span class="ja">鮮肉生煎 ¥12/4個｜蟹粉生煎 ¥28/4個｜カレー牛肉スープ ¥15</span></div>
+    <div class="desc"><span class="zh">1932年创业、米其林必比登推荐的老字号。走「无汤派」路线：面皮松软、肉馅扎实，和小杨的爆汁派刚好互补，可以两家都试比较！</span><span class="ja">1932年創業、ミシュラン・ビブグルマンの老舗。こちらは「スープ少なめ派」：ふんわり生地にしっかり肉餡。小楊の爆汁派と対照的なので食べ比べが楽しい！</span></div>
+    <div class="rv"><span class="zh">游客评价：蟹粉生煎底脆馅香，早点去避开排队人潮。</span><span class="ja">旅行者の声：蟹粉生煎は底カリカリで餡が香ばしい。ピーク前の早め訪問が吉。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.480876,31.227616&name=大壶春云南南路店&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Dahuchun+71+Yunnan+South+Road">Google Maps</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Roe_inside_steamed_female_hairy_crab.jpg/960px-Roe_inside_steamed_female_hairy_crab.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FDF3E3,#F0C784)">🦀</div></div>
+    <div class="fb"><h4><span class="zh">蟹黄鱼面馆（太仓路200号）</span><span class="ja">蟹黄魚 麺館・太倉路200号</span> <span class="stars">★4.2</span><span class="yomi">蟹黄鱼（シエホアンユー）</span></h4>
+    <div class="menu"><span class="zh">蟹黄拌面 ¥88–128｜蟹粉馄饨 约¥45｜清蒸小黄鱼 时价</span><span class="ja">蟹黄拌麺 ¥88–128｜蟹粉ワンタン 約¥45｜蒸し黄魚 時価</span></div>
+    <div class="desc"><span class="zh">社交平台上的人气蟹黄面专门店，蟹黄蟹肉给得毫不手软，拌开后金黄浓郁，配玫瑰醋绝配。就在新天地旁，适合排进Day2午餐。</span><span class="ja">SNSで話題のカニ味噌麺専門店。蟹味噌と蟹肉を惜しみなく盛り、混ぜれば黄金色の濃厚な一杯に。バラ酢との相性抜群。新天地のすぐ隣、Day2ランチに最適。</span></div>
+    <div class="rv"><span class="zh">游客评价：每一口都是蟹香，浓郁到会上瘾的程度。</span><span class="ja">旅行者の声：一口ごとに蟹の香り。クセになる濃厚さ。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.47379,31.22126&name=蟹黄鱼太仓路店&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Xie+Huang+Yu+200+Taicang+Road">Google Maps</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Roe_inside_steamed_female_hairy_crab.jpg/960px-Roe_inside_steamed_female_hairy_crab.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EBBFA8)">🦀</div></div>
+    <div class="fb"><h4><span class="zh">成隆行蟹王府（九江路店）</span><span class="ja">成隆行蟹王府・九江路店</span> <span class="stars">★4.4 (320)</span><span class="yomi">成隆行蟹王府（チョンロンハン シエワンフー）</span></h4>
+    <div class="menu"><span class="zh">蟹宴套餐 ¥388起/人｜蟹粉捞饭｜蟹黄小笼</span><span class="ja">上海蟹コース ¥388〜/人｜蟹粉かけご飯｜蟹味噌小籠包</span></div>
+    <div class="desc"><span class="zh">想升级吃「蟹的全席」就来这家：从前菜到点心全是蟹料理，环境古典、服务到位。人均较高、需提前订位，适合当作旅程的庆祝大餐。</span><span class="ja">「蟹づくしフルコース」に格上げしたいならここ。前菜から点心まで全て蟹料理で、クラシックな内装とサービスも◎。予算高め・要予約、旅のご褒美ディナー向き。</span></div>
+    <div class="rv"><span class="zh">游客评价：蟹新鲜、把蟹的美味发挥到极致，值回票价。</span><span class="ja">旅行者の声：蟹が新鮮で、蟹の美味しさを最大限に引き出している。値段の価値あり。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.48597,31.236977&name=成隆行蟹王府九江路店&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Chenglonghang+216+Jiujiang+Road">Google Maps</a></div></div>
+
+  <h2><span class="zh">汤包・小笼</span><span class="ja">湯包・小籠包</span></h2>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/2019-02-22_Xiaolongbao_in_%22Taste_Of_Shanghai%22_restaurant%2C_Sydney%2C_Australia.jpg/960px-2019-02-22_Xiaolongbao_in_%22Taste_Of_Shanghai%22_restaurant%2C_Sydney%2C_Australia.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FDF3E3,#F5D9A8)">🥟</div></div>
+    <div class="fb"><h4><span class="zh">佳家汤包（黄河路店）</span><span class="ja">佳家湯包・黄河路店</span> <span class="stars">★4.3 (1177)</span><span class="yomi">佳家汤包（ジャージャー タンバオ）</span></h4>
+    <div class="menu"><span class="zh">蟹粉鲜肉汤包 约¥30/笼｜纯鲜肉汤包 约¥20/笼｜葱油拌面 ¥15</span><span class="ja">蟹粉鮮肉湯包 約¥30/せいろ｜鮮肉湯包 約¥20/せいろ｜ネギ油和え麺 ¥15</span></div>
+    <div class="desc"><span class="zh">本地人也排队的汤包名店，皮薄不破、汤清味鲜，性价比极高。离南京东路/人民广场很近，Day2晚餐或Day4早餐都能排。</span><span class="ja">地元民も並ぶ湯包の名店。薄皮なのに破れず、澄んだスープが絶品でコスパ抜群。南京東路／人民広場から近く、Day2の夕食にもDay4の朝食にも組み込めます。</span></div>
+    <div class="rv"><span class="zh">游客评价：一年后还会想念的小笼包，旅程必吃。</span><span class="ja">旅行者の声：一年経っても思い出す小籠包。旅の必食。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.470821,31.234577&name=佳家汤包黄河路店&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Jia+Jia+Tang+Bao+90+Huanghe+Road">Google Maps</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/2019-02-22_Xiaolongbao_in_%22Taste_Of_Shanghai%22_restaurant%2C_Sydney%2C_Australia.jpg/960px-2019-02-22_Xiaolongbao_in_%22Taste_Of_Shanghai%22_restaurant%2C_Sydney%2C_Australia.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FDF3E3,#F5D9A8)">🥟</div></div>
+    <div class="fb"><h4><span class="zh">南翔馒头店（豫园总店）</span><span class="ja">南翔饅頭店・豫園本店</span> <span class="stars">★3.8 (705)</span><span class="yomi">南翔馒头店（ナンシャン マントウディエン）</span></h4>
+    <div class="menu"><span class="zh">经典小笼 ¥25起/笼｜蟹黄大汤包（吸管）约¥38/只</span><span class="ja">クラシック小籠包 ¥25〜/せいろ｜蟹味噌大湯包（ストロー付）約¥38/個</span></div>
+    <div class="desc"><span class="zh">1900年创业的小笼包始祖店，观光气息浓但「插吸管喝汤的大汤包」体验感一流，逛豫园顺路打卡刚好。</span><span class="ja">1900年創業、小籠包の元祖。観光地色は強めですが「ストローでスープを飲む大湯包」の体験は一見の価値あり。豫園散策のついでにどうぞ。</span></div>
+    <div class="rv"><span class="zh">游客评价：中式古典装潢很有气氛，小笼汤鲜、上菜要等。</span><span class="ja">旅行者の声：中華クラシックな内装が雰囲気満点。スープは美味だが提供は待ち時間あり。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.491549,31.226721&name=南翔馒头店豫园店&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Nanxiang+Steamed+Bun+Yuyuan">Google Maps</a></div></div>
+
+  <h2><span class="zh">奶茶补给站</span><span class="ja">ミルクティー補給所</span></h2>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/CHAGEE_Wan_Chai_Tea_House.jpg/960px-CHAGEE_Wan_Chai_Tea_House.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EDF3FA,#C9D9EA)">🧋</div></div>
+    <div class="fb"><h4><span class="zh">霸王茶姬 CHAGEE（南京西路一带多店）</span><span class="ja">覇王茶姫 CHAGEE（南京西路周辺に多店舗）</span> <span class="stars">🧋<span class="zh">人气王</span><span class="ja">人気No.1</span></span><span class="yomi">霸王茶姬（バーワン チャージー）</span></h4>
+    <div class="menu"><span class="zh">①伯牙绝弦 ¥16–20（茉莉雪芽奶茶・销量王）｜②万里木兰 ¥18（红茶底・奶香浓）｜③青青糯山 ¥17（糯米香乌龙・清爽）｜④花田乌龙 ¥17（栀子花香）｜均可选低糖/去冰</span><span class="ja">①伯牙絶弦（ボーヤージュエシエン）¥16–20（ジャスミン茶ミルクティー・売上No.1）｜②万里木蘭 ¥18（紅茶ベース・ミルク感濃厚）｜③青青糯山 ¥17（もち米香ウーロン・さっぱり）｜④花田烏龍 ¥17（クチナシの花香）｜低糖・氷なし選択可</span></div>
+    <div class="desc"><span class="zh">现在中国最红的国风茶饮，主打「原叶鲜奶茶」——只有茶＋奶、不加珍珠配料，茶香突出、热量也低。第一次喝闭眼点「伯牙绝弦」不会错；想尝特别的选「青青糯山」，糯米香很療癒。杯袋设计像国风精品，适合拍照，杯盖上还印热量数字。门市点单用柜台扫码小程序即可，不会中文也能看图点。</span><span class="ja">いま中国で最も勢いのある国風ティーブランド。「原葉フレッシュミルクティー」が売りで、茶葉＋ミルクのみ・タピオカ等のトッピングなしだから茶の香りが際立ちカロリーも控えめ。初めてなら迷わず「伯牙絶弦」を。変わり種なら、もち米の香りに癒される「青青糯山」がおすすめ。カップと袋のデザインは国風コスメのようで写真映え◎、フタにはカロリー表示も。注文はカウンターのQRミニプログラムから写真を見て選べるので中国語ができなくても大丈夫。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/search?keyword=霸王茶姬&center=121.4453,31.2235">高德搜寻</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/20211212_Heytea_at_MixC_Zhengzhou.jpg/960px-20211212_Heytea_at_MixC_Zhengzhou.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EFF7F2,#C4E0CE)">🍇</div></div>
+    <div class="fb"><h4><span class="zh">喜茶 HEYTEA（常德路店等）</span><span class="ja">喜茶 HEYTEA（常徳路店ほか）</span> <span class="stars">★4.2 (18)</span><span class="yomi">喜茶（シーチャー）</span></h4>
+    <div class="menu"><span class="zh">多肉葡萄 ¥19–29｜芝士茗茶 ¥15–22｜烤黑糖波波 ¥18</span><span class="ja">多肉葡萄（果肉たっぷりグレープ）¥19–29｜チーズフォームティー ¥15–22｜黒糖タピオカ ¥18</span></div>
+    <div class="desc"><span class="zh">芝士奶盖的开创者。「多肉葡萄」真的吃得到果肉，冰沙口感在酷暑天超解渴。门市多、用小程序点单免排队。</span><span class="ja">チーズフォームの元祖。「多肉葡萄」は本物の果肉入りで、スラッシュ食感が猛暑に最高。店舗多数、ミニプログラム注文で並ばず受け取れます。</span></div>
+    <div class="rv"><span class="zh">游客评价：草莓芝士奶盖是史上最强组合之一。</span><span class="ja">旅行者の声：イチゴ×チーズフォームは史上最強の組み合わせのひとつ。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.44221,31.234402&name=喜茶常德路店&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=HEYTEA+Changde+Road+Shanghai">Google Maps</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Red_braised_pork_belly_%E7%BA%A2%E7%83%A7%E8%82%89_h%C3%B3ngsh%C4%81or%C3%B2u_23_January_2025_Filipinas4.jpg/960px-Red_braised_pork_belly_%E7%BA%A2%E7%83%A7%E8%82%89_h%C3%B3ngsh%C4%81or%C3%B2u_23_January_2025_Filipinas4.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🍖</div></div>
+    <div class="fb"><h4><span class="zh">老正兴菜馆（福州路556号）</span><span class="ja">老正興菜館（福州路556号）</span> <span class="stars">★4.1 (70)<span class="zh">・米其林一星</span><span class="ja">・ミシュラン一つ星</span></span><span class="yomi">老正兴（ラオジェンシン）</span></h4>
+    <div class="menu"><span class="zh">红烧肉 ¥88｜油爆虾 ¥128｜草头圈子 ¥78｜人均约¥150–200</span><span class="ja">紅焼肉（ホンシャオロウ）¥88｜油爆蝦 ¥128｜草頭圏子 ¥78｜一人約¥150–200</span></div>
+    <div class="desc"><span class="zh">160年老字号的本帮菜代表，也是价格最亲民的米其林一星之一。浓油赤酱的红烧肉入口即化，很适合7人点一桌合菜当正式晚餐。环境偏老派、走的是味道路线。</span><span class="ja">創業160年、上海料理（本幇菜）を代表する老舗で、最も手頃なミシュラン一つ星のひとつ。「濃油赤醤」の紅焼肉はとろける美味しさ。7人で円卓を囲む本格ディナーにぴったり。内装はレトロで、味で勝負する店です。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.480069,31.233164&name=老正兴菜馆&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Lao+Zheng+Xing+Restaurant+Fuzhou+Road+Shanghai">Google Maps</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Gu%C4%81ngm%C3%ADngc%C5%ABn_2.jpg/960px-Gu%C4%81ngm%C3%ADngc%C5%ABn_2.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FDF3E3,#F5D9A8)">🥮</div></div>
+    <div class="fb"><h4><span class="zh">光明邨大酒家（淮海中路588号）</span><span class="ja">光明邨大酒家（淮海中路588号）</span> <span class="stars">★4.3 (68)</span><span class="yomi">光明邨（グアンミンツン）・鲜肉月饼（シエンロウ ユエビン）</span></h4>
+    <div class="menu"><span class="zh">现烤鲜肉月饼 约¥6/个（1楼外带窗口）｜楼上可堂食本帮菜</span><span class="ja">焼きたて鮮肉月餅 約¥6/個（1階テイクアウト窓口）｜上階では上海料理も</span></div>
+    <div class="desc"><span class="zh">上海人心中的鲜肉月饼天花板：酥皮千层、咬开是滚烫多汁的鲜肉馅，门口排队本身就是名景。有旅客说这是「在上海吃过最好吃的东西」。傍晚常整批完售，看到队伍不长就冲。</span><span class="ja">上海っ子が認める「鮮肉月餅」の最高峰。サクサクの何層ものパイ皮の中から熱々ジューシーな肉餡が。店頭の行列自体が名物です。「上海で食べた中で一番美味しかった」というレビューも。夕方は売り切れがちなので、列が短ければ即並ぶべし。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.4675643,31.2205026&name=光明邨大酒家&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Guang+Ming+Cun+Restaurant+Huaihai+Road+Shanghai">Google Maps</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Shen_Dacheng%27s_shepherd%27s_purse_dumplings.jpg/960px-Shen_Dacheng%27s_shepherd%27s_purse_dumplings.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EFF5EC,#CBDFC4)">🍡</div></div>
+    <div class="fb"><h4><span class="zh">沈大成（南京东路636号）</span><span class="ja">沈大成（南京東路636号）</span> <span class="stars">★3.8 (102)<span class="zh">・150年老字号</span><span class="ja">・創業150年</span></span><span class="yomi">沈大成（シェンダーチョン）</span></h4>
+    <div class="menu"><span class="zh">青团 ¥5–8｜条头糕 ¥10｜双酿团 ¥6｜糕点伴手礼盒装</span><span class="ja">青団（チントゥアン）¥5–8｜条頭糕 ¥10｜双醸団 ¥6｜お土産用の詰め合わせも</span></div>
+    <div class="desc"><span class="zh">南京东路上的点心老铺，外带窗口常年排队。糯叽叽的青团、条头糕是招牌，甜度不高、日本朋友接受度很高，也很适合当伴手礼。逛南京东路时顺路买几个边走边吃刚刚好。</span><span class="ja">南京東路の老舗菓子店で、テイクアウト窓口は常に行列。もちもちの青団や条頭糕が看板商品。甘さ控えめで和菓子好きの日本人にも大好評、お土産にも◎。南京東路散策のついでに食べ歩きするのにちょうどいい。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.478316,31.23576&name=沈大成南京东路总店&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Shen+Da+Cheng+Nanjing+East+Road+Shanghai">Google Maps</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Roe_inside_steamed_female_hairy_crab.jpg/960px-Roe_inside_steamed_female_hairy_crab.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FDF3E3,#F5D9A8)">🦀</div></div>
+    <div class="fb"><h4><span class="zh">李百蟹・蟹黄面・临江餐厅（外滩・豫园店）</span><span class="ja">李百蟹・蟹黄麺・臨江レストラン（外灘・豫園店）</span> <span class="stars"><span class="zh">人均约¥98</span><span class="ja">一人約¥98</span></span><span class="yomi">李百蟹（リーバイシエ）・蟹黄面（シエホァンミエン）</span></h4>
+    <div class="menu"><span class="zh">蟹黄面／蟹黄拌饭（主食可选面或饭）｜桂花酒酿软酪｜草莓麻薯</span><span class="ja">蟹黄麺／蟹黄まぜご飯（主食は麺かご飯を選択可）｜金木犀の酒醸チーズ｜いちご餅</span></div>
+    <div class="desc"><span class="zh"><b>如果只吃一家蟹黄面，就是这家。</b>坐落外滩边、抬头就是陆家嘴「三件套」，江景位吃面体验感拉满。招牌蟹黄面用大闸蟹的蟹黄蟹膏慢炒出香，裹满劲道面条，鲜醇不腥。有食客说蟹黄给得很实在，主食选米饭更香。吃完再来份糯叽叽甜品解腻。建议错峰到店，才能从容享受美食与江景。</span><span class="ja"><b>カニ味噌麺を一軒だけ選ぶならここ。</b>外灘沿いにあり、見上げれば陸家嘴の「三種の神器」。川景色の席で麺をすする体験は格別です。看板の蟹黄麺は上海蟹のカニ味噌をじっくり炒めて香りを引き出し、コシのある麺にたっぷり絡めた一杯。臭みがなく旨みが濃厚。「カニ味噌を惜しみなく使っている」「主食はご飯の方が香ばしい」との声も。締めにもちもち系のデザートを。混雑時間を外して行くと、料理も景色もゆっくり楽しめます。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/search?keyword=%E6%9D%8E%E7%99%BE%E8%9F%B9%E8%9F%B9%E9%BB%84%E9%9D%A2%E4%B8%B4%E6%B1%9F%E9%A4%90%E5%8E%85&city=%E4%B8%8A%E6%B5%B7">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Li+Bai+Xie+crab+roe+noodles+the+Bund+Shanghai">Google Maps</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Red_braised_pork_belly_%E7%BA%A2%E7%83%A7%E8%82%89_h%C3%B3ngsh%C4%81or%C3%B2u_23_January_2025_Filipinas4.jpg/960px-Red_braised_pork_belly_%E7%BA%A2%E7%83%A7%E8%82%89_h%C3%B3ngsh%C4%81or%C3%B2u_23_January_2025_Filipinas4.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#FBF1EE,#EFC7BC)">🐟</div></div>
+    <div class="fb"><h4><span class="zh">沪公馆・上海菜</span><span class="ja">滬公館・上海料理</span> <span class="stars"><span class="zh">人均约¥115</span><span class="ja">一人約¥115</span></span><span class="yomi">沪公馆（フーゴングワン）</span></h4>
+    <div class="menu"><span class="zh">松鼠桂鱼｜桂花红烧肉｜蟹粉捞饭｜响油鳝丝｜熏鱼</span><span class="ja">松鼠桂魚（甘酢あんの姿揚げ）｜金木犀の紅焼肉｜カニ味噌まぜご飯｜響油鱔絲｜燻製魚</span></div>
+    <div class="desc"><span class="zh">主打正宗本帮浓油赤酱。松鼠桂鱼酥脆酸甜、造型精致；桂花红烧肉肥瘦相间、香气扑鼻；蟹粉捞饭金灿灿铺在热米饭上，拌匀后每粒米都裹着鲜香。<b>请认准外滩22号与九江路80号两家店</b>，其他多为仿冒。</span><span class="ja">本格的な上海料理「濃油赤醤」が看板。松鼠桂魚はサクサクの甘酢あんで見た目も華やか、金木犀の紅焼肉は脂身と赤身のバランスが絶妙で香り高い。カニ味噌まぜご飯は黄金色のカニ味噌を熱々のご飯にのせ、混ぜると一粒一粒に旨みが絡みます。<b>外灘22号店と九江路80号店が本店</b>。それ以外は模倣店が多いので注意を。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.4855,31.2372&name=沪公馆九江路80号&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Hu+Gong+Guan+Jiujiang+Road+Shanghai">Google Maps</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/2019-02-22_Xiaolongbao_in_%22Taste_Of_Shanghai%22_restaurant%2C_Sydney%2C_Australia.jpg/960px-2019-02-22_Xiaolongbao_in_%22Taste_Of_Shanghai%22_restaurant%2C_Sydney%2C_Australia.jpg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="grad" style="background:linear-gradient(135deg,#EFF5EC,#CBDFC4)">🍽️</div></div>
+    <div class="fb"><h4><span class="zh">外滩家宴・上海菜（外滩南京路店／外滩豫园店）</span><span class="ja">外灘家宴・上海料理（外灘南京路店／外灘豫園店）</span> <span class="stars"><span class="zh">本地人爱店</span><span class="ja">地元で人気</span></span><span class="yomi">外滩家宴（ワイタン ジャーイエン）</span></h4>
+    <div class="menu"><span class="zh">白烧鳝背｜松鼠桂鱼｜桂花红烧肉｜雪菜春笋小黄鱼｜老上海菜饭</span><span class="ja">白焼き鱔背｜松鼠桂魚｜金木犀の紅焼肉｜高菜と筍の小黄魚｜老上海菜飯</span></div>
+    <div class="desc"><span class="zh">味道很受本地人喜爱的本帮菜代表。白烧鳝背鲜嫩无骨、松鼠桂鱼酥脆酸甜、桂花红烧肉肥而不腻、雪菜春笋小黄鱼鲜掉眉毛，配一碗喷香的老上海菜饭，是妥妥的家常幸福感。<b>只有南京路店与外滩豫园店是本店</b>，坊间抄袭很多，订位前请确认地址。</span><span class="ja">地元の人に愛される本格上海料理。白焼き鱔背は骨がなく柔らかく、松鼠桂魚は甘酸っぱくサクサク、金木犀の紅焼肉は脂っこくなく上品、高菜と筍の小黄魚は驚くほど旨みが濃い。香ばしい老上海菜飯を添えれば、家庭的な幸福感に満たされます。<b>本店は南京路店と外灘豫園店のみ</b>。模倣店が多いので予約前に住所の確認を。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/search?keyword=%E5%A4%96%E6%BB%A9%E5%AE%B6%E5%AE%B4%20%E5%8D%97%E4%BA%AC%E8%B7%AF%E5%BA%97&city=%E4%B8%8A%E6%B5%B7">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Waitan+Jiayan+Nanjing+Road+Shanghai">Google Maps</a></div></div>
+
+  <div class="food"><div class="in">
+    <div class="fim"><div class="grad" style="display:flex;background:linear-gradient(135deg,#FDF3E3,#F5D9A8)">🥐</div></div>
+    <div class="fb"><h4><span class="zh">国际饭店西饼屋・蝴蝶酥（黄河路28号）</span><span class="ja">国際飯店ベーカリー・バタフライパイ（黄河路28号）</span> <span class="stars"><span class="zh">人均约¥49・伴手礼首选</span><span class="ja">一人約¥49・お土産の定番</span></span><span class="yomi">蝴蝶酥（フーディエスー）＝バタフライパイ</span></h4>
+    <div class="menu"><span class="zh">大蝴蝶酥（招牌）｜奶油小方｜拿破仑</span><span class="ja">大バタフライパイ（看板商品）｜クリームケーキ｜ナポレオン</span></div>
+    <div class="desc"><span class="zh"><b>上海伴手礼的天花板。</b>一走近就闻到浓郁的黄油奶香，咬下去层层酥脆掉满手，是上海人从小吃到大的味道。<b>就在佳家汤包（黄河路90号）同一条街</b>，第四天早上吃完汤包顺路买一大袋带回日本刚刚好。缺点是人很多、要排队，建议开门后就去。</span><span class="ja"><b>上海土産の最高峰。</b>近づくだけで濃厚なバターとミルクの香り。かじれば何層ものパイがはらはらと崩れる、上海っ子が子どもの頃から食べ続けてきた味です。<b>佳家湯包（黄河路90号）と同じ通り</b>にあるので、4日目の朝に湯包を食べたついでに大袋で買って帰るのが完璧な流れ。難点は行列。開店直後を狙いましょう。</span></div></div>
+  </div><div class="fbtn"><a style="background:var(--fuji);color:#fff" target="_blank" href="https://uri.amap.com/marker?position=121.4726,31.2338&name=国际饭店西饼屋黄河路&coordinate=wgs84">高德</a><a style="border:1.2px solid var(--fuji);color:var(--fuji)" target="_blank" href="https://maps.google.com/?q=Park+Hotel+Bakery+Huanghe+Road+Shanghai">Google Maps</a></div></div>
+
+  <div class="wx-note">💳 <span class="zh">点单提醒：多数门市不收国际信用卡实体刷卡，请先在 Alipay／WeChat Pay 绑定日本发行的Visa/Master即可扫码付款；准备少量现金备用。</span><span class="ja">注文メモ：ほとんどの店で海外クレカの直接決済は不可。Alipay／WeChat Payに日本発行のVisa/Masterを紐付けておけばQR決済OK。少額の現金も予備に。</span></div>
+</div>
+</div>
+<!-- ══════════ TAB 3 指南 ══════════ -->
+<div class="tab" id="tab-guide">
+<div class="wrap">
+  <h2><span class="zh">行李打包清单</span><span class="ja">パッキングリスト</span></h2>
+  <div class="gcard" id="packing"></div>
+
+  <h2><span class="zh">中国旅游规范提醒</span><span class="ja">中国旅行の注意事項</span></h2>
+  <div class="gcard">
+    <div class="rule"><span class="ri">🛂</span><div><b><span class="zh">签证</span><span class="ja">ビザ</span></b>：<span class="zh">日本护照短期停留（30日内）目前适用免签政策；台湾护照持有者需持有效台胞证。出发前请再次确认最新规定。</span><span class="ja">日本パスポートは短期滞在（30日以内）ビザ免除措置の対象。台湾パスポートの方は有効な台胞証が必要です。出発前に最新情報を必ず確認してください。</span></div></div>
+    <div class="rule"><span class="ri">💰</span><div><b><span class="zh">支付</span><span class="ja">決済</span></b>：<span class="zh">现金流通少，Alipay／WeChat Pay 绑定海外卡是必备（TourCard也可）。地铁可用支付宝乘车码。</span><span class="ja">現金流通は少なめ。Alipay／WeChat Payへの海外カード紐付けが実質必須（TourCardも可）。地下鉄はAlipayの乗車コードでOK。</span></div></div>
+    <div class="rule"><span class="ri">📶</span><div><b><span class="zh">网络</span><span class="ja">ネット</span></b>：<span class="zh">中国本地Wi-Fi无法使用 Google／LINE／Instagram。建议用日本电信商国际漫游、或旅游eSIM（漫游流量不受限制）。</span><span class="ja">中国現地のWi-FiではGoogle／LINE／Instagramが使えません。日本キャリアの海外ローミング、または旅行用eSIM（ローミング回線は規制対象外）を推奨。</span></div></div>
+    <div class="rule"><span class="ri">🚇</span><div><b><span class="zh">安检</span><span class="ja">手荷物検査</span></b>：<span class="zh">地铁进站需过X光安检，瓶装水可携带；博物馆与观景台多需护照实名预约。</span><span class="ja">地下鉄入場時にX線検査あり（ペットボトルは持込可）。博物館・展望台はパスポート実名予約制が多いです。</span></div></div>
+    <div class="rule"><span class="ri">🚕</span><div><b><span class="zh">叫车</span><span class="ja">タクシー</span></b>：<span class="zh">用滴滴出行App或支付宝内「打车」小程序，可输入目的地免沟通。</span><span class="ja">配車はDiDiアプリ、またはAlipay内「打車」ミニアプリで。目的地入力式なので言葉の心配なし。</span></div></div>
+    <div class="rule"><span class="ri">🔌</span><div><b><span class="zh">电压</span><span class="ja">電圧</span></b>：<span class="zh">220V。日本两脚扁插头多数插座可直接用，但电压不同，请确认设备支持100–240V。</span><span class="ja">220V。日本の2ピンプラグはそのまま挿せる口が多いものの電圧が異なるため、機器が100–240V対応か要確認。</span></div></div>
+    <div class="rule"><span class="ri">📋</span><div><b><span class="zh">住宿登记</span><span class="ja">臨時宿泊登録</span></b>：<span class="zh">外国人在中国住宿须于24小时内办理「临时住宿登记」。酒店会自动代办，但<b>民宿／公寓通常需要自行办理</b>（带护照，免费）。房东提供了登记说明网页 → <a href="https://shanghai-tour-guide.com/" target="_blank" style="color:var(--fuji);font-weight:700;text-decoration:underline">shanghai-tour-guide.com</a>，<b>抵达当天请先照着办好</b>，并在微信群里跟房东确认。</span><span class="ja">外国人は中国での宿泊時、24時間以内に「臨時宿泊登録」が必要です。ホテルは自動で代行しますが、<b>民泊・アパートは自分で手続きするケースがほとんど</b>（パスポート持参、無料）。ホストから登録手順のページが共有されています → <a href="https://shanghai-tour-guide.com/" target="_blank" style="color:var(--fuji);font-weight:700;text-decoration:underline">shanghai-tour-guide.com</a>。<b>到着日のうちに必ず済ませ</b>、WeChatグループでホストにも確認を。</span></div></div>
+    <div class="rule"><span class="ri">🛂</span><div><b><span class="zh">入境</span><span class="ja">入国</span></b>：<span class="zh">日本护照享30日免签（2026年现行政策，出发前请再确认）；台湾伙伴需台胞证。机上会发入境卡，请备一支笔。指纹采集在入境大厅自助机完成。</span><span class="ja">日本国籍は30日以内の滞在はビザ免除（2026年時点の措置。出発前に再確認を）。台湾のメンバーは台胞証が必要。機内で入国カードが配られるのでペンを1本手荷物に。指紋採取は入国ホールの自動端末で。</span></div></div>
+    <div class="rule"><span class="ri">💧</span><div><b><span class="zh">生活</span><span class="ja">現地生活</span></b>：<span class="zh">自来水不可生饮，请买瓶装水（便利店¥2–3）。餐厅茶水多为免费。厕所建议自备卫生纸。8月紫外线强，防晒与补水务必做足。</span><span class="ja">水道水は飲用不可。ペットボトル（コンビニ¥2–3）を。飲食店のお茶は無料が一般的。トイレットペーパーは携帯を推奨。8月は紫外線が強いので日焼け止めと水分補給を十分に。</span></div></div>
+    <div class="rule"><span class="ri">🗺️</span><div><b><span class="zh">地图与导航</span><span class="ja">地図とナビ</span></b>：<span class="zh">本页地图使用<b>高德地图</b>图资，中国境内可正常显示。各景点的「高德导航」按钮在当地直接可用；「Google Maps」按钮在中国境内需漫游或VPN，适合出发前先在日本查看。建议出发前先装好高德地图App并切换英文／日文介面。</span><span class="ja">このページの地図は<b>高德地図（AutoNavi）</b>を使用しており、中国国内でも正常に表示されます。各スポットの「高德导航」ボタンは現地でそのまま使用可。「Google Maps」ボタンは中国国内ではローミングかVPNが必要なので、出発前に日本で下調べする用に。高德地図アプリを事前にインストールし、英語／日本語表示に切り替えておくと便利です。</span></div></div>
+    <div class="rule"><span class="ri">🚭</span><div><b><span class="zh">其他</span><span class="ja">その他</span></b>：<span class="zh">室内公共场所全面禁烟（含电子烟）；无人机在市区基本禁飞；导览台、寺庙请保持安静并遵守拍照规定。</span><span class="ja">屋内公共の場は全面禁煙（電子タバコ含む）。ドローンは市街地ほぼ飛行禁止。寺院では静粛に、撮影ルールの順守を。</span></div></div>
+  </div>
+
+  <h2><span class="zh">机场・车站 ⇄ 住处 交通指引</span><span class="ja">空港・駅 ⇄ 宿 アクセスガイド</span></h2>
+  <div class="gcard">
+    <div class="rule"><span class="ri">📍</span><div><b><span class="zh">住处</span><span class="ja">宿</span></b>：<span class="zh">麦克公寓・愚园路40号｜最近车站 <b>地铁2号线【静安寺】站 2号口</b>（静安寺站另有7号线・14号线）。以下时间为一般情况的估算，尖峰或雷雨时请多抓15–20分。</span><span class="ja">麦克アパート・愚園路40号｜最寄りは <b>地下鉄2号線【静安寺】駅 2番出口</b>（静安寺駅は7号線・14号線も乗り入れ）。以下は平常時の目安。ラッシュ時や雷雨時は15〜20分多めに見てください。</span></div></div>
+  </div>
+
+  <h2 style="font-size:12.5px;color:var(--warm-l);margin-top:4px">🛬 <span class="zh">抵达日（8/3）機場 → 住处</span><span class="ja">到着日（8/3）空港 → 宿</span></h2>
+
+  <div class="gcard">
+    <div class="trip">
+      <div class="th"><span class="tag" style="background:var(--trans)">HO1380</span><span class="zh">浦东机场 T2 → 静安寺</span><span class="ja">浦東空港T2 → 静安寺</span><span class="yomi">浦东机场（プードン ジーチャン）</span></div>
+      <div class="opt"><span class="oi">🚕</span><div><b><span class="zh">出租车｜约60–75分・¥170–200</span><span class="ja">タクシー｜約60〜75分・¥170〜200</span></b><br><span class="zh">距离约50km，含过路费。行李多、5人以上时最省力，但傍晚易塞车。到达层出关后依「出租车 Taxi」指示排队，切勿理会拉客的黑车。上车给司机看住处地址的中文截图即可。</span><span class="ja">距離約50km、高速代込み。荷物が多い・大人数なら最も楽ですが、夕方は渋滞しがち。到着ロビーを出たら「出租车 Taxi」の表示に従って列へ。客引きの白タクには絶対に応じないこと。乗車後は宿の中国語住所のスクショを見せればOK。</span></div></div>
+      <div class="opt"><span class="oi">🚄</span><div><b><span class="zh">磁悬浮＋地铁｜约55–65分・¥50＋¥5</span><span class="ja">リニア＋地下鉄｜約55〜65分・¥50＋¥5</span></b><br><span class="zh"><span class="num">磁浮</span>浦东机场 →（8分・时速300km）→ 龙阳路 → <span class="num">2号线</span>龙阳路 → 静安寺（约35分・14站）。当天有机票可优惠到¥40。既是交通也是体验，但要拖行李换乘一次。<b>末班磁浮约21:40</b>。</span><span class="ja"><span class="num">リニア</span>浦東空港 →（8分・時速300km）→ 龍陽路 → <span class="num">2号線</span>龍陽路 → 静安寺（約35分・14駅）。当日の航空券提示で¥40に割引。移動しながらアトラクションも楽しめますが、荷物を持っての乗換が1回。<b>リニア最終は約21:40</b>。</span></div></div>
+      <div class="opt"><span class="oi">🚇</span><div><b><span class="zh">地铁2号线直达｜约80–90分・¥8</span><span class="ja">地下鉄2号線一本｜約80〜90分・¥8</span></b><br><span class="zh">最便宜。<b>注意：部分班次需在「广兰路」站同月台换乘</b>（机场段用短编组车），跟着人群走即可。行李箱在车厢内会比较占位，避开18–19点尖峰较舒服。</span><span class="ja">最も安い方法。<b>注意：一部の列車は「広蘭路」駅で同一ホーム乗換が必要</b>（空港区間は短編成のため）。周りの流れについて行けば大丈夫。車内はスーツケースがかさばるので、18〜19時のラッシュは避けたいところ。</span></div></div>
+      <div class="best">💡 <span class="zh">龍・チョウショウ 15:25 抵达 → 出关提领约30–40分 → 打车约17:15 到、地铁约17:45 到。<b>建议这组打车</b>，才赶得上17:00前后的会合。</span><span class="ja">龍・チョウショウは15:25着 → 入国・受取に30〜40分 → タクシーなら約17:15着、地下鉄なら約17:45着。<b>この組はタクシー推奨</b>、17時前後の集合に間に合います。</span></div>
+    </div>
+
+    <div class="trip">
+      <div class="th"><span class="tag" style="background:var(--trans)">MU538</span><span class="zh">虹桥机场 T1 → 静安寺</span><span class="ja">虹橋空港T1 → 静安寺</span><span class="yomi">虹桥机场（ホンチャオ ジーチャン）</span></div>
+      <div class="opt"><span class="oi">🚕</span><div><b><span class="zh">出租车｜约25–30分・¥40–55　★最推荐</span><span class="ja">タクシー｜約25〜30分・¥40〜55　★イチオシ</span></b><br><span class="zh">距离仅约13km，又便宜又快，行李也不用扛上扛下。3人正好一台车。</span><span class="ja">距離はわずか約13km。安くて速く、荷物の上げ下ろしも不要。3名ならちょうど1台に収まります。</span></div></div>
+      <div class="opt"><span class="oi">🚇</span><div><b><span class="zh">走到T2搭2号线｜约40–45分・¥6</span><span class="ja">T2へ移動して2号線｜約40〜45分・¥6</span></b><br><span class="zh">T1与T2之间步行约15分（或搭免费摆渡车），再从<span class="num">2号线</span>虹桥2号航站楼直达静安寺（约25分・11站）。省钱但要多走一段。</span><span class="ja">T1〜T2は徒歩約15分（無料シャトルバスも有）。そこから<span class="num">2号線</span>虹橋第2ターミナル駅→静安寺まで直通（約25分・11駅）。安いですが、その分歩きます。</span></div></div>
+      <div class="opt"><span class="oi">🚇</span><div><b><span class="zh">10号线转2号线｜约45分・¥5</span><span class="ja">10号線→2号線｜約45分・¥5</span></b><br><span class="zh">T1楼下就有<span class="num">10号线</span>「虹桥1号航站楼」站 → 陕西南路 → 转<span class="num">2号线</span>1站到静安寺。不用走到T2，但要换乘一次。</span><span class="ja">T1直下に<span class="num">10号線</span>「虹橋1号航站楼」駅 → 陝西南路 → <span class="num">2号線</span>に乗換えて1駅で静安寺。T2まで歩かずに済みますが乗換が1回。</span></div></div>
+      <div class="best">💡 <span class="zh">みなみ・チンキ・小玉・博源 16:35 抵达 → 出关约30分 → 打车约17:35 到住处。四个人分两台或一台大车都行，<b>直接打车最顺</b>。</span><span class="ja">みなみ・チンキ・小玉・博源は16:35着 → 入国手続き約30分 → タクシーで約17:35に宿着。4名なら2台に分乗かワゴン1台、<b>タクシーが一番スムーズ</b>です。</span></div>
+    </div>
+  </div>
+
+  <h2 style="font-size:12.5px;color:var(--warm-l);margin-top:4px">🛫 <span class="zh">回程日（8/6）住处 → 机场・车站</span><span class="ja">帰国日（8/6）宿 → 空港・駅</span></h2>
+
+  <div class="gcard">
+    <div class="trip">
+      <div class="th"><span class="tag" style="background:var(--spot)">Ⓐ Ⓑ</span><span class="zh">静安寺 → 浦东机场（MU539 14:30 ／ HO1385 18:40）</span><span class="ja">静安寺 → 浦東空港（MU539 14:30 ／ HO1385 18:40）</span></div>
+      <div class="opt"><span class="oi">🚕</span><div><b><span class="zh">出租车｜约60–75分・¥170–200　★建议这个</span><span class="ja">タクシー｜約60〜75分・¥170〜200　★これ推奨</span></b><br><span class="zh"><b>10:15 出发 → 约11:30 抵达 T1。</b>行李多又赶飞机，这段别省。用滴滴或支付宝叫车，7人需分2台，请两台一起叫、约好在T1出发层同一个门集合。</span><span class="ja"><b>10:15出発 → 11:30頃にT1到着。</b>荷物が多く搭乗時刻もあるので、ここは節約しないのが正解。DiDiかAlipayで配車を。7名なら2台に分乗し、同時に呼んでT1出発階の同じドアで合流する約束を。</span></div></div>
+      <div class="opt"><span class="oi">🚄</span><div><b><span class="zh">2号线＋磁悬浮｜约55–65分・¥4＋¥50</span><span class="ja">2号線＋リニア｜約55〜65分・¥4＋¥50</span></b><br><span class="zh"><span class="num">2号线</span>静安寺 → 龙阳路（约35分）→ <span class="num">磁浮</span>8分到浦东机场。想体验磁悬浮就选这个，10:00 出发同样约11:15 到。龙阳路站也有行李寄存柜。</span><span class="ja"><span class="num">2号線</span>静安寺 → 龍陽路（約35分）→ <span class="num">リニア</span>8分で浦東空港。リニア体験希望ならこれ。10:00発でも11:15頃に到着します。龍陽路駅にも荷物ロッカーあり。</span></div></div>
+      <div class="opt"><span class="oi">🚇</span><div><b><span class="zh">2号线直达｜约80–90分・¥8</span><span class="ja">2号線一本｜約80〜90分・¥8</span></b><br><span class="zh">最省钱但最久，<b>要走这个请9:45前出发</b>。同样可能需在广兰路换乘。</span><span class="ja">最も安いが最も時間がかかります。<b>これで行くなら9:45までに出発</b>を。広蘭路での乗換が必要な場合あり。</span></div></div>
+      <div class="best">⏰ <span class="zh">国际线抓起飞前3小时到机场。<b>Ⓐ MU539 14:30 → 11:30 前到、最晚 10:15 出发</b>（退房请10:00前办完）；<b>Ⓑ HO1385 18:40 → 15:40 前到、14:15 前后出发</b>即可，午后还能吃顿从容的午餐。</span><span class="ja">国際線は出発3時間前の空港着が目安。<b>Ⓐ MU539 14:30 → 11:30までに到着、遅くとも10:15出発</b>（チェックアウトは10:00までに）。<b>Ⓑ HO1385 18:40 → 15:40までに到着、14:15頃の出発</b>でOK。午後はゆっくりランチも楽しめます。</span></div>
+    </div>
+
+    <div class="trip">
+      <div class="th"><span class="tag" style="background:var(--act)">Ⓑ</span><span class="zh">静安寺 → 上海虹桥站（高铁组）</span><span class="ja">静安寺 → 上海虹橋駅（高鉄組）</span></div>
+      <div class="opt"><span class="oi">🚇</span><div><b><span class="zh">2号线直达｜约38分・¥7　★最推荐</span><span class="ja">2号線一本｜約38分・¥7　★イチオシ</span></b><br><span class="zh"><span class="num">2号线</span>静安寺 →「虹桥火车站」站，<b>不用换乘</b>，出闸后依指示牌走到候车大厅。行李多也还好，因为全程有电梯。</span><span class="ja"><span class="num">2号線</span>静安寺 →「虹橋火車站」駅まで<b>乗換なし</b>。改札を出たら案内表示に従い待合ホールへ。全区間エレベーターがあるので荷物が多くても大丈夫。</span></div></div>
+      <div class="opt"><span class="oi">🚕</span><div><b><span class="zh">出租车｜约30–40分・¥70–90</span><span class="ja">タクシー｜約30〜40分・¥70〜90</span></b><br><span class="zh">走延安高架，尖峰时段反而比地铁慢，行李特别多时才选。</span><span class="ja">延安高架を通りますが、ラッシュ時は地下鉄より遅くなることも。荷物が特別多い場合の選択肢。</span></div></div>
+      <div class="best">⏰ <span class="zh">虹桥站非常大，从地铁到候车厅与月台要走一大段，<b>请抓发车前60–90分抵达</b>。外国护照走人工验票口，请再多留10分钟。</span><span class="ja">虹橋駅は非常に広く、地下鉄から待合ホール・ホームまでかなり歩きます。<b>発車60〜90分前の到着</b>を。外国パスポートは有人改札なので、さらに10分ほど余裕を。</span></div>
+    </div>
+
+    <div class="trip">
+      <div class="th"><span class="tag" style="background:var(--trans)">+</span><span class="zh">静安寺 → 虹桥机场（如有人从虹桥飞）</span><span class="ja">静安寺 → 虹橋空港（虹橋発の方へ）</span></div>
+      <div class="opt"><span class="oi">🚇</span><div><b><span class="zh">T2｜2号线直达 约30–35分・¥6</span><span class="ja">T2｜2号線一本 約30〜35分・¥6</span></b><br><span class="zh"><span class="num">2号线</span>静安寺 →「虹桥2号航站楼」站，出站即到航站楼。</span><span class="ja"><span class="num">2号線</span>静安寺 →「虹橋2号航站楼」駅、駅を出ればそのままターミナルです。</span></div></div>
+      <div class="opt"><span class="oi">🚕</span><div><b><span class="zh">T1｜打车约25–30分・¥50–60</span><span class="ja">T1｜タクシー約25〜30分・¥50〜60</span></b><br><span class="zh">T1没有2号线，搭地铁需在虹桥2号航站楼下车再走15分或转10号线，赶时间就直接打车。</span><span class="ja">T1に2号線は乗り入れていません。地下鉄の場合は虹橋2号航站楼で降りて徒歩15分、または10号線に乗換え。急ぐならタクシーが確実。</span></div></div>
+    </div>
+  </div>
+
+  <h2><span class="zh">上海必买伴手礼清单</span><span class="ja">上海のお土産リスト</span></h2>
+
+  <div class="gcard" style="background:#FDF2F5;border-color:#EFC7BC">
+    <div class="rule"><span class="ri">🚫</span><div><b><span class="zh">最重要：肉制品绝对不能带回日本！</span><span class="ja">最重要：肉製品は絶対に日本へ持ち込めません！</span></b><br><span class="zh">日本动物检疫严禁从中国带入任何肉制品，<b>鲜肉月饼、肉松青团、熟食、香肠、肉干都不行</b>（含真空包装），机场会查，违者最重可能被罚。想吃鲜肉月饼请在上海当场吃完。<br>另外：生鲜水果、种子、植物也不可携带；酒类与酱料等液体请收托运（手提限100ml）。</span><span class="ja">日本の動物検疫は中国からの肉製品の持ち込みを厳しく禁止しています。<b>鮮肉月餅、肉鬆入り青団、惣菜、ソーセージ、ジャーキーはすべてNG</b>（真空パックでも不可）。空港で検査され、違反すると重い罰則の対象になります。鮮肉月餅は上海で食べきりましょう。<br>その他：生の果物・種子・植物も持込不可。酒類やソース類の液体は預け荷物へ（手荷物は100mlまで）。</span></div></div>
+  </div>
+
+  <div class="gcard">
+    <h3>🏛️ <span class="zh">经典老字号（送长辈、送同事最稳）</span><span class="ja">定番の老舗（目上の人・職場用に鉄板）</span></h3>
+    <div class="rule"><span class="ri">🥐</span><div><b><span class="zh">蝴蝶酥</span><span class="ja">蝴蝶酥（バタフライパイ）</span></b>　<span class="zh">上海伴手礼的第一名。256层酥皮、浓郁黄油香，公认「天花板」是<b>国际饭店</b>（黄河路28号／南京西路170号帆声西饼屋），另一派是<b>哈尔滨食品厂</b>（淮海中路603号）。包装简单、怕潮怕压，<b>建议回国前一天买、放手提行李</b>。</span><span class="ja">上海土産の王様。256層のパイ生地と濃厚なバターの香り。「最高峰」と評されるのが<b>国際飯店</b>（黄河路28号／南京西路170号 帆声西餅屋）、もう一派が<b>ハルビン食品廠</b>（淮海中路603号）。簡易包装で湿気と衝撃に弱いので、<b>帰国前日に買って手荷物で</b>。</span></div></div>
+    <div class="rule"><span class="ri">🍬</span><div><b><span class="zh">大白兔奶糖＋联名周边</span><span class="ja">大白兎ミルクキャンディ＋コラボ雑貨</span></b>　<span class="zh">1959年诞生的国民零食，除了原味还有咖啡、红豆、鲜果口味。不想买糖的话，<b>大白兔润唇膏、护手霜</b>更有话题性。专卖店在福建中路336号，第一食品与久光超市也都有。</span><span class="ja">1959年誕生の国民的キャンディ。プレーンのほかコーヒー・小豆・フルーツ味も。お菓子以外なら<b>大白兎のリップクリームやハンドクリーム</b>が話題性◎。専門店は福建中路336号、第一食品や久光のスーパーにも。</span></div></div>
+    <div class="rule"><span class="ri">🫘</span><div><b><span class="zh">城隍庙五香豆・梨膏糖</span><span class="ja">城隍廟の五香豆・梨膏糖</span></b>　<span class="zh">老城隍庙的招牌土产，奶油五香豆咸香耐嚼；梨膏糖清朝就有，润喉又有老上海味。<b>逛豫园那天顺手买最方便</b>（老城隍庙食品商店・豫园老街80号）。</span><span class="ja">城隍廟の名物。バター風味の五香豆は塩気があって噛むほど旨い。梨膏糖は清代からある喉に優しい飴で、老上海の風情たっぷり。<b>豫園に行く日に買うのが効率的</b>（老城隍廟食品商店・豫園老街80号）。</span></div></div>
+    <div class="rule"><span class="ri">🍡</span><div><b><span class="zh">沈大成 青团・条头糕</span><span class="ja">沈大成の青団・条頭糕</span></b>　<span class="zh">南京东路636号。糯叽叽的甜度低、日本人接受度很高。<b>但肉松馅的不能带回日本</b>，请选豆沙、芝麻等素馅。保存期短，最后一天买。</span><span class="ja">南京東路636号。もちもち系で甘さ控えめ、日本人の口によく合います。<b>ただし肉鬆入りは持ち帰り不可</b>。あんこや胡麻など植物性の餡を選んで。日持ちしないので最終日に。</span></div></div>
+    <div class="rule"><span class="ri">🥮</span><div><b><span class="zh">西番尼・白脱饼干・蟹壳黄</span><span class="ja">西番尼・バター（白脱）ビスケット・蟹殻黄</span></b>　<span class="zh"><b>西番尼</b>取自上海话「喜欢你」的谐音，蛋糕＋果酱＋巧克力的老派西点（哈尔滨食品厂）；<b>提子白脱饼干</b>是花园饭店的网红品，建议线上预约免排队；<b>蟹壳黄</b>（王家沙・南京西路805号）葱油、豆沙口味都好吃。</span><span class="ja"><b>西番尼</b>は上海語の「好きだよ」の語呂合わせ。ケーキ＋ジャム＋チョコの昔ながらの洋菓子（ハルビン食品廠）。<b>レーズンバタービスケット</b>は花園飯店の人気商品で、オンライン予約すれば並ばずに済みます。<b>蟹殻黄</b>（王家沙・南京西路805号）はネギ油味も餡子味も美味。</span></div></div>
+  </div>
+
+  <div class="gcard">
+    <h3>✨ <span class="zh">最新网红款（送朋友、拍照有话题）</span><span class="ja">最新の人気アイテム（友達用・映える）</span></h3>
+    <div class="rule"><span class="ri">🍥</span><div><b><span class="zh">Ms. Juan 卷・棉花糖蛋卷</span><span class="ja">Ms. Juan 卷・マシュマロ入りエッグロール</span></b>　<span class="zh">最近上海最红的甜点之一：薄脆蛋卷里夹着会牵丝的棉花糖，外酥内软。<b>每天现做、只能放3天</b>，所以务必<b>回国前一天才买</b>。鸿寿坊店（普陀区新会路236弄）。</span><span class="ja">いま上海で最も話題のスイーツのひとつ。薄くパリッとしたエッグロールに、伸びるマシュマロがサンドされ、外はサクサク中はふわり。<b>毎日手作りで日持ちは3日のみ</b>、必ず<b>帰国前日に購入</b>を。鴻寿坊店（普陀区新会路236弄）。</span></div></div>
+    <div class="rule"><span class="ri">🌸</span><div><b><span class="zh">繁花糕点（上海城市限定）</span><span class="ja">繁花糕点（上海シティ限定）</span></b>　<span class="zh">被称为「上海最高颜值伴手礼」，糕点造型的灵感来自上海的地标建筑，内馅有蜜桃乌龙、杨枝甘露、青柠柚子等新口味。视觉超好拍，很适合送女生。</span><span class="ja">「上海で最も見た目が美しいお土産」と称される一品。上海のランドマーク建築をモチーフにした造形で、餡はピーチウーロン、マンゴーポメロ、ライムゆずなど新しい味わい。写真映えするので女性へのギフトに最適。</span></div></div>
+    <div class="rule"><span class="ri">☕</span><div><b><span class="zh">黑胶唱片耳挂咖啡</span><span class="ja">レコード型ドリップコーヒー</span></b>　<span class="zh">小红书爆红款：黑胶唱片造型配老上海风包装，既复古又新潮。用阿拉比卡豆、醇香不酸涩，几乎不会踩雷。<b>轻、不怕压、好分送</b>，是很聪明的伴手礼选择。</span><span class="ja">中国のSNSで爆発的人気。レコード盤の形と老上海風のパッケージで、レトロかつモダン。アラビカ豆使用で酸味が少なく万人受けする味。<b>軽くて潰れず配りやすい</b>、非常に賢い選択です。</span></div></div>
+    <div class="rule"><span class="ri">🧸</span><div><b><span class="zh">POP MART 泡泡玛特 全球旗舰店</span><span class="ja">POP MART 世界旗艦店</span></b>　<span class="zh">南京东路229号宏伊国际广场1F，是<b>全球旗舰店</b>，有不少限量版与上海独家商品。店内装潢本身就很好拍。Day1 逛南京东路时顺路。</span><span class="ja">南京東路229号 宏伊国際広場1F。<b>世界旗艦店</b>で、限定版や上海限定商品が多数。店内の内装自体が撮影スポット。Day1の南京東路散策のついでに。</span></div></div>
+    <div class="rule"><span class="ri">🥤</span><div><b><span class="zh">霸王茶姬周边・上海牌咖啡</span><span class="ja">覇王茶姫グッズ・上海牌コーヒー</span></b>　<span class="zh">霸王茶姬的杯袋、马克杯设计走国风路线，很多人专程收集。<b>上海牌咖啡</b>则是1958年中国第一罐铁罐咖啡，复古铁罐拿来当摆饰也好看。</span><span class="ja">覇王茶姫のカップバッグやマグは国風デザインで、コレクション目的の人も多数。<b>上海牌コーヒー</b>は1958年に登場した中国初の缶コーヒー。レトロな缶はインテリアとしても◎。</span></div></div>
+  </div>
+
+  <div class="gcard">
+    <h3>💄 <span class="zh">美妆・杂货（轻便好带）</span><span class="ja">コスメ・雑貨（軽くて持ち帰りやすい）</span></h3>
+    <div class="rule"><span class="ri">🧴</span><div><b><span class="zh">雪花膏・百雀羚</span><span class="ja">雪花膏・百雀羚</span></b>　<span class="zh">老上海女人的保养秘密武器，滋润又可当妆前乳，复古包装很有味道（上海女人旗舰店・天津路450号）。百雀羚创立于1931年，护肤脂平价好用。</span><span class="ja">老上海の女性たちが愛用してきた保湿クリーム。化粧下地としても使え、レトロなパッケージが素敵（上海女人旗艦店・天津路450号）。百雀羚は1931年創業、保湿クリームは手頃で使い勝手良し。</span></div></div>
+    <div class="rule"><span class="ri">🧼</span><div><b><span class="zh">上海硫磺皂</span><span class="ja">上海硫黄石けん</span></b>　<span class="zh">价格超亲民的隐藏神物，杀菌除螨、止痒去屑，油性肌肤与容易长痘的人特别推荐。超市就买得到，重量轻、单价低，最适合大量分送。</span><span class="ja">驚くほど安い隠れた名品。殺菌・かゆみ止め・フケ対策に効き、脂性肌やニキビができやすい人に好評。スーパーで買え、軽くて安いのでバラマキ土産に最適。</span></div></div>
+    <div class="rule"><span class="ri">🧣</span><div><b><span class="zh">上海故事 真丝丝巾</span><span class="ja">上海故事のシルクスカーフ</span></b>　<span class="zh">南京东路680号。真丝价格不便宜，但质感与设计都很出色，送长辈或女性长官都很拿得出手。</span><span class="ja">南京東路680号。シルクなので安くはありませんが、質感もデザインも上質。目上の方や女性の上司への贈り物として喜ばれます。</span></div></div>
+    <div class="rule"><span class="ri">🪭</span><div><b><span class="zh">香囊・寺庙文创</span><span class="ja">匂い袋・寺院の文創グッズ</span></b>　<span class="zh">江南女子传统的香囊，现在也有卡通造型。静安寺、玉佛寺的文创（香囊、御守、手串、冰箱贴、帆布袋）从¥50到¥1000都有，家里有信仰的长辈会很喜欢。</span><span class="ja">江南の女性が身につけてきた匂い袋。今はキャラクター型も。静安寺や玉仏寺の文創グッズ（匂い袋、お守り、腕輪、マグネット、トートバッグ）は¥50〜¥1000と幅広く、信仰のある方への贈り物に喜ばれます。</span></div></div>
+  </div>
+
+  <div class="gcard">
+    <h3>🛒 <span class="zh">一站买齐的地方（我们的行程内）</span><span class="ja">一気に揃う場所（今回の行程内）</span></h3>
+    <div class="rule"><span class="ri">1️⃣</span><div><b><span class="zh">第一食品商店・和平食礼（南京东路）</span><span class="ja">第一食品商店・和平食礼（南京東路）</span></b>　<span class="zh">Day1 晚上顺路。整栋都是老字号：大白兔、蝴蝶酥、沈大成、凯司令、邵万生⋯⋯一次买齐最方便。<b>小提醒：很多糕点是秤重卖的，直接跟阿姨说「要多少钱的」比说重量好沟通。</b></span><span class="ja">Day1の夜に立ち寄れます。館内すべてが老舗：大白兎、蝴蝶酥、沈大成、凱司令、邵万生など。一度に揃うので効率的。<b>ワンポイント：量り売りが多いので、重さより「〇元分ください」と伝える方が通じます。</b></span></div></div>
+    <div class="rule"><span class="ri">2️⃣</span><div><b><span class="zh">久光百货 B1・静安嘉里中心（住处旁）</span><span class="ja">久光百貨店B1・静安嘉里中心（宿のそば）</span></b>　<span class="zh">走路5分钟、冷气足、10:00 开门。超市里茶叶、大白兔、零食、硫磺皂一次买齐。<b>Ⓑ晚班机组与Ⓒ高铁组</b>最后一天早上正好用得上。</span><span class="ja">徒歩5分、冷房完備、10:00開店。スーパーで茶葉、大白兎、お菓子、硫黄石けんが一度に揃います。<b>Ⓑ遅い便の組とⒸ高鉄組</b>は最終日の朝にちょうど活用できます。</span></div></div>
+    <div class="rule"><span class="ri">3️⃣</span><div><b><span class="zh">淮海中路一条街</span><span class="ja">淮海中路の老舗ストリート</span></b>　<span class="zh">几百米内集中了光明邨（鲜肉月饼・现场吃）、哈尔滨食品厂（小蝴蝶酥・西番尼）、老大昌、长春食品店，几乎不会踩雷。<b>B案与C案下午都会经过</b>。</span><span class="ja">数百メートルの間に光明邨（鮮肉月餅・その場で食べる用）、ハルビン食品廠（ミニ蝴蝶酥・西番尼）、老大昌、長春食品店が集中。ハズレがほぼありません。<b>B案・C案とも午後に通ります</b>。</span></div></div>
+    <div class="rule"><span class="ri">4️⃣</span><div><b><span class="zh">浦东机场 T1 出境后</span><span class="ja">浦東空港T1 出国後</span></b>　<span class="zh">最后的保险。大白兔、茶叶、蝴蝶酥礼盒机场都有，只是价格贵一点。<b>Ⓐ早班机组</b>如果市区来不及买，就留到这里解决。</span><span class="ja">最後の保険。大白兎、茶葉、蝴蝶酥のギフトボックスは空港でも買えます（やや割高）。<b>Ⓐ早い便の組</b>が市内で買いそびれた場合はここで。</span></div></div>
+  </div>
+
+  <h2><span class="zh">在地攻略・避雷提醒</span><span class="ja">現地攻略・失敗しないコツ</span></h2>
+  <div class="gcard">
+    <div class="rule"><span class="ri">🌃</span><div><b><span class="zh">外滩</span><span class="ja">外灘</span></b>：<span class="zh">灯光 <b>22:00 准时熄灯</b>（假日可能延长），别太晚去。拍陆家嘴三件套推荐「东泰路×花园石桥路」路口的上海中心台阶处；「九江路」也是拍东方明珠的好机位，人少很多。</span><span class="ja">ライトアップは<b>22:00きっかりに消灯</b>（祝日は延長あり）。遅すぎる時間は避けて。陸家嘴の3棟を撮るなら「東泰路×花園石橋路」交差点の上海タワー下の階段が◎。「九江路」も東方明珠の穴場アングルで人が少なめ。</span></div></div>
+    <div class="rule"><span class="ri">⛴️</span><div><b><span class="zh">游江</span><span class="ja">川下り</span></b>：<span class="zh">不必买高价游船票，<b>轮渡只要¥2</b>就能看到几乎一样的江景（部分航线有停航时段，先确认班次）。</span><span class="ja">高い遊覧船は不要。<b>フェリーなら¥2</b>でほぼ同じ景色。一部航路に運休時間帯があるので事前確認を。</span></div></div>
+    <div class="rule"><span class="ri">⛩️</span><div><b><span class="zh">静安寺</span><span class="ja">静安寺</span></b>：<span class="zh">门票¥50、面积不大约10分钟逛完，有人觉得性价比不高，<b>外面看看也很够</b>。另外<b>只有周五、周六与节假日晚上19点才开灯</b>，8/6是周四，想看金顶请趁白天。</span><span class="ja">拝観料¥50、境内は広くなく10分ほどで回れるため「外から眺めるだけでも十分」という声も。また<b>ライトアップは金・土・祝日の19時のみ</b>。8/6は木曜なので、金色の屋根は日中に見るのがおすすめ。</span></div></div>
+    <div class="rule"><span class="ri">🚕</span><div><b><span class="zh">交通</span><span class="ja">交通</span></b>：<span class="zh">上海打车费用相对高、尖峰易堵车，<b>除非行李多或赶时间，优先搭地铁</b>。7人分车时也记得先讲好集合点。</span><span class="ja">上海のタクシーは割高でラッシュ時は渋滞しがち。<b>荷物が多い時や急ぎ以外は地下鉄優先</b>が正解。7名で車を分ける時は集合場所を先に決めておきましょう。</span></div></div>
+    <div class="rule"><span class="ri">🏛️</span><div><b><span class="zh">预约</span><span class="ja">事前予約</span></b>：<span class="zh">热门场馆需提前1–3天预约（上海科技馆、上海博物馆本馆、东方明珠、上海中心等）。上海博物馆<b>东馆免费免预约但周二闭馆</b>，本馆则是周一闭馆，别跑空。</span><span class="ja">人気施設は1〜3日前の予約が必要（上海科技館、上海博物館本館、東方明珠、上海タワーなど）。上海博物館は<b>東館が無料・予約不要だが火曜休館</b>、本館は月曜休館。空振りにご注意を。</span></div></div>
+    <div class="rule"><span class="ri">👟</span><div><b><span class="zh">体力</span><span class="ja">体力配分</span></b>：<span class="zh">上海景点多靠走，请穿舒服的运动鞋。南京东路步行街人非常多、假日更夸张，逛个氛围就好，别排太满。</span><span class="ja">上海観光は歩きが基本。履き慣れたスニーカーを。南京東路歩行者天国は非常に混雑し、休日はさらに凄まじいので、雰囲気を味わう程度に留めて予定を詰め込みすぎないこと。</span></div></div>
+  </div>
+
+  <h2><span class="zh">行李寄存速查</span><span class="ja">荷物預けクイックガイド</span></h2>
+  <div class="gcard">
+    <div class="rule"><span class="ri">🏨</span><div><b><span class="zh">住处寄放</span><span class="ja">宿に預ける</span></b>：<span class="zh">免费、退房后仍可把行李留在住处，请事先在微信群里跟房东说一声。最省事的选项。</span><span class="ja">無料。チェックアウト後も荷物を置かせてもらえます。事前にWeChatグループでホストに一声を。一番ラクな方法。</span></div></div>
+    <div class="rule"><span class="ri">🛗</span><div><b><span class="zh">静安嘉里中心 B1</span><span class="ja">静安嘉里中心 B1</span></b>：<span class="zh">免费寄存柜，可放28寸箱，10:00–22:00。2号线静安寺站出站即到、离住处步行5分，最推荐。</span><span class="ja">無料ロッカー、28インチ対応、10:00–22:00。2号線・静安寺駅直結で宿から徒歩5分。イチオシ。</span></div></div>
+    <div class="rule"><span class="ri">🚇</span><div><b><span class="zh">2号线车站寄存柜</span><span class="ja">2号線 駅構内ロッカー</span></b>：<span class="zh">静安寺・南京西路・人民广场・南京东路・陆家嘴・龙阳路・虹桥2号航站楼・上海科技馆等站的<b>闸内付费区</b>。小¥2／中¥4／大¥5 每小时，24小时封顶¥12／¥24／¥30，免押金。中柜放20寸、大柜放28寸。</span><span class="ja">静安寺・南京西路・人民広場・南京東路・陸家嘴・龍陽路・虹橋第2ターミナル・上海科技館などの<b>改札内エリア</b>。小¥2／中¥4／大¥5（1時間）、24時間上限¥12／¥24／¥30、デポジット不要。中は20インチ、大は28インチ対応。</span></div></div>
+    <div class="rule"><span class="ri">📱</span><div><b><span class="zh">使用方式</span><span class="ja">使い方</span></b>：<span class="zh">扫柜上二维码进入「小铁寄存柜」或「丰巢」微信小程序，介面只有中文、需先绑好中国支付。热门站早上9点后常全满。</span><span class="ja">ロッカーのQRから「小鉄寄存柜」または「丰巢」のWeChatミニプログラムへ。中国語のみ・中国系決済の事前設定が必要。人気駅は朝9時以降満杯になりがち。</span></div></div>
+  </div>
+
+  <h2><span class="zh">紧急信息</span><span class="ja">緊急情報</span></h2>
+  <div class="gcard">
+    <div class="em"><span class="en">🚓 <span class="zh">当地警察</span><span class="ja">警察</span></span><a href="tel:110">110</a></div>
+    <div class="em"><span class="en">🚑 <span class="zh">急救</span><span class="ja">救急</span></span><a href="tel:120">120</a></div>
+    <div class="em"><span class="en">🚒 <span class="zh">火警</span><span class="ja">消防</span></span><a href="tel:119">119</a></div>
+    <div class="em"><span class="en">🇯🇵 <span class="zh">日本国驻上海总领事馆（代表）</span><span class="ja">在上海日本国総領事館（代表）</span></span><a href="tel:+862152574766" style="font-size:12px">021-5257-4766</a></div>
+    <div class="rule" style="margin-top:8px"><span class="ri">💡</span><div><span class="zh">护照遗失：先到就近派出所开报案证明，再联络领事馆补办。集合走散时：回「静安寺山门前」集合。</span><span class="ja">パスポート紛失時：最寄りの派出所で紛失証明を取得後、領事館へ。はぐれた時の集合場所：「静安寺の山門前」。</span></div></div>
+  </div>
+
+  <h2><span class="zh">资料总汇</span><span class="ja">トラベル情報まとめ</span></h2>
+  <div class="gcard">
+    <div class="fl"><div class="no">✈️ HO1380 <span class="zh">吉祥航空</span><span class="ja">吉祥航空</span> 8/3（<span class="zh">一</span><span class="ja">月</span>）</div>
+      <div class="rt"><span class="st">NRT T2 13:20</span><span>→</span><span class="st">PVG 浦东 T2 15:25</span><span class="ar">龍・チョウショウ</span></div></div>
+    <div class="fl"><div class="no">✈️ MU538 <span class="zh">中国东方航空</span><span class="ja">中国東方航空</span> 8/3（<span class="zh">一</span><span class="ja">月</span>）</div>
+      <div class="rt"><span class="st">HND T3 14:30</span><span>→</span><span class="st">SHA 虹桥 T1 16:35</span><span class="ar">みなみ・チンキ・小玉・博源</span></div></div>
+    <div class="fl"><div class="no">🛬 MU539 <span class="zh">中国东方航空・回程</span><span class="ja">中国東方航空・帰国便</span> 8/6（<span class="zh">四</span><span class="ja">木</span>）</div>
+      <div class="rt"><span class="st">PVG 浦东 T1 14:30</span><span>→</span><span class="st">HND 羽田 T3 18:30</span><span class="ar">博源</span></div></div>
+    <div class="fl"><div class="no">🛬 HO1385 <span class="zh">吉祥航空・回程</span><span class="ja">吉祥航空・帰国便</span> 8/6（<span class="zh">四</span><span class="ja">木</span>）</div>
+      <div class="rt"><span class="st">PVG 浦东 18:40</span><span>→</span><span class="st">HND 羽田 22:30</span><span class="ar">龍</span></div></div>
+    <div class="fl tbd"><div class="no">📝 <span class="zh">其他班次（如有变动请填这里）</span><span class="ja">その他の便（変更があればここに記入）</span></div>
+      <div class="link-save"><input id="retFlight" placeholder="例：HO1379 PVG 15:40 → NRT 19:30"><button onclick="saveText('retFlight','sh_ret')"><span class="zh">保存</span><span class="ja">保存</span></button></div></div>
+    <div class="fl tbd"><div class="no">🚄 <span class="zh">虹桥高铁组・车次待填（继续旅行的伙伴）</span><span class="ja">虹橋・高鉄組・列車番号未定（旅を続けるメンバー）</span></div>
+      <div class="rt"><span class="ar"><span class="zh">2号线静安寺→虹桥火车站直达约38分</span><span class="ja">2号線・静安寺→虹橋火車站まで直通約38分</span></span></div>
+      <div class="link-save"><input id="trainInfo" placeholder="例：G7xx 虹桥 15:20 → 杭州东 16:15"><button onclick="saveText('trainInfo','sh_train')"><span class="zh">保存</span><span class="ja">保存</span></button></div></div>
+    <div class="fl"><div class="no">🏠 <span class="zh">住宿・麦克公寓（Homestay 归宿）</span><span class="ja">宿泊・麦克アパートメント（Homestay 归宿）</span></div>
+      <div class="rt" style="line-height:1.9;display:block"><span class="zh"><b>地址</b>：上海市静安区静安寺街道愚园路40号<br><b>交通</b>：地铁2号线【静安寺】站 2号口出（亦有7／14号线）<br><b>Wi-Fi</b>：麦克301／密码 cityhome301<br><b>门禁</b>：大门栏杆上密码盒取门禁卡与铁门钥匙，密码 <b>0803</b><br><b>退房</b>：8/6（四）12:00 前</span><span class="ja"><b>住所</b>：上海市静安区 静安寺街道 愚園路40号<br><b>アクセス</b>：地下鉄2号線【静安寺】駅 2番出口（7／14号線も乗入）<br><b>Wi-Fi</b>：麦克301／パスワード cityhome301<br><b>入室</b>：正門の柵のキーボックスに入館カードと鉄門の鍵、暗証番号 <b>0803</b><br><b>チェックアウト</b>：8/6（木）12:00まで</span></div>
+      <div class="link-save"><input id="hotelUrl" placeholder="https://…（订单/凭证云端链接）"><button onclick="saveText('hotelUrl','sh_hotel')"><span class="zh">保存</span><span class="ja">保存</span></button><a id="hotelOpen" href="#" target="_blank"><span class="zh">打开</span><span class="ja">開く</span></a></div></div>
+  </div>
+  <div class="foot"><span class="zh">照片来源：Wikimedia Commons（各摄影者）・仅供行程参考</span><span class="ja">写真出典：Wikimedia Commons（各撮影者）・行程参考用</span></div>
+</div>
+</div>
+
+<!-- ══════════ TAB 4 天气 ══════════ -->
+<div class="tab" id="tab-wx">
+<div class="wrap">
+  <h2><span class="zh">旅行期间天气（8/3–8/6・上海）</span><span class="ja">旅行期間の天気（8/3–8/6・上海）</span></h2>
+  <div id="wxList"><div class="loading"><span class="zh">正在取得最新预报…</span><span class="ja">最新の予報を取得中…</span></div></div>
+  <div class="wx-note">🌡️ <span class="zh"><b>8月的上海</b>：一年中最热的时期。平均最高约35°C、最低约27°C，湿度80%以上，体感常超过40°C。午后雷阵雨频繁，也是台风季——出发前请留意台风动向。</span><span class="ja"><b>8月の上海</b>：一年で最も暑い時期。平均最高約35°C・最低約27°C、湿度80%超で体感は40°C超えも。午後の雷雨が頻発し、台風シーズンでもあります——出発前に台風情報の確認を。</span></div>
+  <div class="wx-note">👕 <span class="zh"><b>穿着总建议</b>：速干短袖＋防晒外套、帽子、折叠伞（晴雨两用）、汗湿备用衣物一件。商场地铁冷气极强，怕冷的伙伴带件薄长袖。鞋选透气好走的运动鞋或凉鞋。</span><span class="ja"><b>服装まとめ</b>：速乾半袖＋UVカット羽織り、帽子、折りたたみ傘（晴雨兼用）、汗用の着替え1枚。モールと地下鉄は冷房が非常に強いので、寒がりさんは薄手長袖を。靴は通気性の良いスニーカーかサンダルで。</span></div>
+  <div class="wx-note">🗺️ <span class="zh"><b>行程动线</b>：静安寺（住宿）→ 豫园・外滩 → 迪士尼／武康路・陆家嘴 → 机场。地图上蓝色=Day1、绿色=Day2、橘色=Day3、灰色=Day4，可在行程页切换查看。</span><span class="ja"><b>旅のルート</b>：静安寺（宿）→ 豫園・外灘 → ディズニー／武康路・陸家嘴 → 空港。地図の青=Day1、緑=Day2、オレンジ=Day3、グレー=Day4。行程ページで日別に切替できます。</span></div>
+</div>
+</div>
+
+<!-- ══════════ 底部導覽 ══════════ -->
+<div class="nav">
+  <button id="nv-iti" class="on" onclick="setTab('iti')"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 2.8v4M16 2.8v4"/><path d="M7.5 14h3M7.5 17h6"/></svg></span><span class="zh">行程</span><span class="ja">行程</span></button>
+  <button id="nv-food" onclick="setTab('food')"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3.5 12.5h17c0 4-3 7.5-8.5 7.5s-8.5-3.5-8.5-7.5Z"/><path d="M8.5 9.5c-.8-1.2.8-1.8 0-3M12 9.5c-.8-1.2.8-1.8 0-3M15.5 9.5c-.8-1.2.8-1.8 0-3"/></svg></span><span class="zh">美食</span><span class="ja">グルメ</span></button>
+  <button id="nv-guide" onclick="setTab('guide')"><span class="ic"><svg viewBox="0 0 24 24"><rect x="4.5" y="7.5" width="15" height="13" rx="3"/><path d="M9 7.5V5.8A1.8 1.8 0 0 1 10.8 4h2.4A1.8 1.8 0 0 1 15 5.8v1.7M9 7.5v13M15 7.5v13"/></svg></span><span class="zh">指南</span><span class="ja">ガイド</span></button>
+  <button id="nv-wx" onclick="setTab('wx')"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9.5 8.2a4 4 0 1 1 6.4 2.3"/><path d="M9.5 3.5V2M4.9 5.4l-1-1M3.5 10H2"/><path d="M8.2 20.5h8.6a3.4 3.4 0 0 0 .6-6.75 5 5 0 0 0-9.7 1.1 2.9 2.9 0 0 0 .5 5.65Z"/></svg></span><span class="zh">天气</span><span class="ja">天気</span></button>
+</div>
+<script>
+/* ---- 安全存储（本地打开/托管时用 localStorage，受限环境自动改内存） ---- */
+const mem={};
+const store={
+  get(k){try{return localStorage.getItem(k)}catch(e){return mem[k]??null}},
+  set(k,v){try{localStorage.setItem(k,v)}catch(e){mem[k]=v}}
+};
+/* ---- 語言 ---- */
+function setLang(l){
+  document.body.className='lang-'+l;
+  document.getElementById('btn-zh').classList.toggle('on',l==='zh');
+  document.getElementById('btn-ja').classList.toggle('on',l==='ja');
+  store.set('sh_lang',l);
+}
+/* ---- Tab ---- */
+function setTab(t){
+  ['iti','food','guide','wx'].forEach(x=>{
+    document.getElementById('tab-'+x).classList.toggle('on',x===t);
+    document.getElementById('nv-'+x).classList.toggle('on',x===t);
+  });
+  window.scrollTo({top:0});
+  if(t==='iti'){setTimeout(()=>map.invalidateSize(),60)}
+}
+/* ---- 地圖 ---- */
+const DAYC={1:'#4A7FB5',2:'#5B9E7D',3:'#E8A13C',4:'#7A8CA0'};
+const RTC={A:'#4A7FB5',B:'#5B9E7D',C:'#8B7BB5'};
+const spots=[
+ {d:1,n:'麦克公寓｜愚园路40号',lat:31.22444,lng:121.44405,hotel:1},
+ {d:1,n:'老正兴菜馆（福州路・晚餐）',lat:31.233164,lng:121.480069},
+ {d:1,n:'南京东路步行街',lat:31.234721,lng:121.474898},
+ {d:1,n:'外滩夜景',lat:31.240261,lng:121.490577},
+ {d:2,r:'A',n:'上海科技馆',lat:31.21797,lng:121.541078},
+ {d:2,r:'A',n:'陆家嘴 IFC（午餐）',lat:31.236862,lng:121.501858},
+ {d:2,r:'A',n:'上海中心118层・东方明珠',lat:31.239689,lng:121.499755},
+ {d:2,r:'A',n:'城隍庙・豫园商城（夜）',lat:31.225731,lng:121.492507},
+ {d:2,r:'B',n:'豫园',lat:31.227236,lng:121.492094},
+ {d:2,r:'B',n:'城隍庙・豫园老街',lat:31.225731,lng:121.492507},
+ {d:2,r:'B',n:'蟹黄鱼面馆（午餐）',lat:31.22126,lng:121.47379},
+ {d:2,r:'B',n:'新天地',lat:31.21919,lng:121.47525},
+ {d:2,r:'B',n:'光明邨 鲜肉月饼',lat:31.2205026,lng:121.4675643},
+ {d:2,r:'B',n:'星巴克烘焙工坊',lat:31.2305679,lng:121.4614034},
+ {d:2,r:'B',n:'张园',lat:31.228023,lng:121.460096},
+ {d:2,r:'C',n:'愚园路 city walk',lat:31.22322,lng:121.43326},
+ {d:2,r:'C',n:'安福路 RAC（brunch）',lat:31.21323,lng:121.440092},
+ {d:2,r:'C',n:'乌鲁木齐中路',lat:31.21354,lng:121.44558},
+ {d:2,r:'C',n:'五原路',lat:31.21066,lng:121.44165},
+ {d:2,r:'C',n:'武康大楼',lat:31.20448,lng:121.438326},
+ {d:2,r:'C',n:'徐家汇天主教堂',lat:31.191164,lng:121.4361},
+ {d:3,n:'上海迪士尼乐园（全员）',lat:31.143397,lng:121.657871},
+ {d:4,n:'静安嘉里中心（行李寄存）',lat:31.223142,lng:121.449176},
+ {d:4,n:'张园',lat:31.228023,lng:121.460096},
+ {d:4,n:'静安寺・久光百货',lat:31.223519,lng:121.445284}
+];
+/* WGS-84 → GCJ-02（火星坐标）：高德底图用的是 GCJ-02，不转换会偏移约 500m */
+const _PI=3.14159265358979324,_A=6378245.0,_EE=0.00669342162296594323;
+function _tLat(x,y){let r=-100+2*x+3*y+.2*y*y+.1*x*y+.2*Math.sqrt(Math.abs(x));
+ r+=(20*Math.sin(6*x*_PI)+20*Math.sin(2*x*_PI))*2/3;r+=(20*Math.sin(y*_PI)+40*Math.sin(y/3*_PI))*2/3;
+ r+=(160*Math.sin(y/12*_PI)+320*Math.sin(y*_PI/30))*2/3;return r}
+function _tLng(x,y){let r=300+x+2*y+.1*x*x+.1*x*y+.1*Math.sqrt(Math.abs(x));
+ r+=(20*Math.sin(6*x*_PI)+20*Math.sin(2*x*_PI))*2/3;r+=(20*Math.sin(x*_PI)+40*Math.sin(x/3*_PI))*2/3;
+ r+=(150*Math.sin(x/12*_PI)+300*Math.sin(x/30*_PI))*2/3;return r}
+function gcj(lat,lng){
+ const dLat0=_tLat(lng-105,lat-35),dLng0=_tLng(lng-105,lat-35);
+ const rad=lat/180*_PI;let magic=Math.sin(rad);magic=1-_EE*magic*magic;const sq=Math.sqrt(magic);
+ const dLat=(dLat0*180)/((_A*(1-_EE))/(magic*sq)*_PI);
+ const dLng=(dLng0*180)/(_A/sq*Math.cos(rad)*_PI);
+ return [lat+dLat,lng+dLng];
+}
+const map=L.map('map',{scrollWheelZoom:false}).setView(gcj(31.2245,121.4655),12);
+/* 高德地图瓦片：中国大陆可正常载入，中文标注 */
+L.tileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}',
+ {subdomains:['1','2','3','4'],attribution:'&copy; 高德地图 AutoNavi',maxZoom:18}).addTo(map);
+let markers=[],lines=[];
+let curRoute='A';
+function draw(day){
+  markers.forEach(m=>map.removeLayer(m));lines.forEach(l=>map.removeLayer(l));markers=[];lines=[];
+  const sel=spots.filter(s=>s.d===day&&(!s.r||s.r===curRoute)),c=day===2?RTC[curRoute]:DAYC[day];
+  sel.forEach((s,i)=>{
+    const html=s.hotel
+      ?`<div style="width:30px;height:30px;border-radius:50%;background:#D08770;color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3)">🏨</div>`
+      :`<div style="width:26px;height:26px;border-radius:50%;background:${c};color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;border:2px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.3)">${i}</div>`;
+    const m=L.marker(gcj(s.lat,s.lng),{icon:L.divIcon({html,className:'',iconSize:[28,28],iconAnchor:[14,14]})})
+      .addTo(map).bindPopup(`<div style="font-weight:700;font-size:12.5px">${s.n}</div>`);
+    markers.push(m);
+  });
+  const hotel=spots[0];
+  const pts=[gcj(hotel.lat,hotel.lng),...sel.filter(s=>!s.hotel).map(s=>gcj(s.lat,s.lng))];
+  const pl=L.polyline(pts,{color:c,weight:3,opacity:.4,dashArray:'8,6'}).addTo(map);lines.push(pl);
+  map.fitBounds(pts,{padding:[34,34]});
+}
+/* ---- 日切換 ---- */
+function setDay(d){
+  for(let i=1;i<=4;i++)document.getElementById('day'+i).classList.toggle('on',i===d);
+  document.querySelectorAll('#dayChips .day-chip').forEach((b,i)=>b.classList.toggle('on',i===d-1));
+  draw(d);
+}
+function setRoute(r){
+  curRoute=r;
+  ['A','B','C'].forEach(x=>document.getElementById('rt'+x).classList.toggle('on',x===r));
+  document.querySelectorAll('#rtChips .day-chip').forEach((b,i)=>b.classList.toggle('on','ABC'[i]===r));
+  draw(2);
+}
+/* ---- 旅記照片（本次瀏覽有效） ---- */
+function addMemo(inp,id){
+  const strip=document.getElementById(id);
+  [...inp.files].forEach(f=>{
+    const img=document.createElement('img');img.src=URL.createObjectURL(f);strip.appendChild(img);
+  });
+  inp.value='';
+}
+/* ---- 行李清單 ---- */
+const PK_DEF=[
+ {k:'bag',zh:'随身背包',ja:'ボディバッグ／リュック',items:['护照/台胞证・パスポート','手机＋充电线・スマホ＋ケーブル','行动电源・モバイルバッテリー','折叠伞・折りたたみ傘','湿纸巾・ウェットティッシュ','常备药・常備薬']},
+ {k:'cabin',zh:'手提行李（机舱）',ja:'機内持ち込み',items:['薄外套・薄手の羽織り','颈枕・ネックピロー','耳机・イヤホン','笔（入境表用）・ペン']},
+ {k:'chk',zh:'托运行李',ja:'預け荷物',items:['换洗衣物4日份・着替え4日分','防晒乳・日焼け止め','盥洗用品・洗面用具','汗湿纸巾・汗拭きシート','凉鞋・サンダル','环保购物袋・エコバッグ']},
+ {k:'shop',zh:'购物清单',ja:'買い物リスト',items:[]}
+];
+function pkLoad(){const s=store.get('sh_pk');if(s){try{return JSON.parse(s)}catch(e){}}
+  return PK_DEF.map(c=>({k:c.k,zh:c.zh,ja:c.ja,items:c.items.map(n=>({n,q:1,done:false}))}));}
+let PK=pkLoad();
+function pkSave(){store.set('sh_pk',JSON.stringify(PK))}
+function pkRender(){
+  const el=document.getElementById('packing');let h='';
+  PK.forEach((c,ci)=>{
+    h+=`<div class="pk-cat"><div class="pkh"><span>🧺 <span class="zh">${c.zh}</span><span class="ja">${c.ja}</span></span><span style="font-weight:500;color:var(--warm-l)">${c.items.filter(i=>i.done).length}/${c.items.length}</span></div>`;
+    c.items.forEach((it,ii)=>{
+      h+=`<div class="pk-item"><input type="checkbox" ${it.done?'checked':''} onchange="pkT(${ci},${ii})"><span class="nm ${it.done?'done':''}">${it.n}</span><span class="qty"><button onclick="pkQ(${ci},${ii},-1)">−</button><span>${it.q}</span><button onclick="pkQ(${ci},${ii},1)">＋</button></span><button class="del" onclick="pkD(${ci},${ii})">✕</button></div>`;
+    });
+    h+=`<div class="pk-add"><input id="pkin-${ci}" placeholder="＋ 新增／追加…" onkeydown="if(event.key==='Enter')pkA(${ci})"><button onclick="pkA(${ci})"><span class="zh">加入</span><span class="ja">追加</span></button></div></div>`;
+  });
+  el.innerHTML=h;
+}
+function pkT(c,i){PK[c].items[i].done=!PK[c].items[i].done;pkSave();pkRender()}
+function pkQ(c,i,d){PK[c].items[i].q=Math.max(1,PK[c].items[i].q+d);pkSave();pkRender()}
+function pkD(c,i){PK[c].items.splice(i,1);pkSave();pkRender()}
+function pkA(c){const inp=document.getElementById('pkin-'+c);const v=inp.value.trim();if(!v)return;PK[c].items.push({n:v,q:1,done:false});inp.value='';pkSave();pkRender()}
+/* ---- 文字保存欄 ---- */
+function saveText(id,key){const v=document.getElementById(id).value.trim();store.set(key,v);if(id==='hotelUrl')updHotel();
+  const b=event.target;const o=b.textContent;b.textContent='✓';setTimeout(()=>b.textContent=o,900)}
+function updHotel(){const u=store.get('sh_hotel');const a=document.getElementById('hotelOpen');if(u){a.href=u;a.style.display=''}else{a.style.display='none'}}
+/* ---- 天氣（Open-Meteo 即時預報＋靜態備援） ---- */
+const WMAP={0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',51:'🌦️',53:'🌦️',55:'🌧️',61:'🌦️',63:'🌧️',65:'🌧️',80:'🌦️',81:'🌧️',82:'⛈️',95:'⛈️',96:'⛈️',99:'⛈️'};
+const WEARS=[
+ {zh:'透气短袖＋薄外套（冷气对策）',ja:'通気半袖＋薄羽織り（冷房対策）'},
+ {zh:'帽子＋防晒＋随身水壶',ja:'帽子＋日焼け止め＋水筒'},
+ {zh:'速干衣＋轻便雨衣＋行动电源',ja:'速乾服＋レインポンチョ＋充電器'},
+ {zh:'轻松服装、液体收托运',ja:'楽な服装・液体は預け荷物へ'}];
+const DLBL=[{zh:'8/3 周一',ja:'8/3 月'},{zh:'8/4 周二',ja:'8/4 火'},{zh:'8/5 周三',ja:'8/5 水'},{zh:'8/6 周四',ja:'8/6 木'}];
+function wxRow(i,ico,tmax,tmin,pp,feel){
+ const d=DLBL[i],w=WEARS[i];
+ return `<div class="wx-day"><div class="ico">${ico}</div><div class="wd"><div class="dt"><span class="zh">${d.zh}</span><span class="ja">${d.ja}</span></div><div class="tp">${tmax}° <small>/ ${tmin}°</small></div><div class="ex"><span class="zh">降雨机率 ${pp}%・体感约${feel}°｜👕 ${w.zh}</span><span class="ja">降水確率 ${pp}%・体感約${feel}°｜👕 ${w.ja}</span></div></div></div>`;
+}
+function wxStatic(){
+ const el=document.getElementById('wxList');
+ el.innerHTML=[0,1,2,3].map(i=>wxRow(i,'🌤️',34,27,'40–60',39)).join('')+
+ `<div class="loading"><span class="zh">※ 显示8月平均值，出发前请再查即时预报</span><span class="ja">※ 8月の平年値です。出発前に最新予報をご確認ください</span></div>`;
+}
+async function wxLoad(){
+ try{
+  const r=await fetch('https://api.open-meteo.com/v1/forecast?latitude=31.2245&longitude=121.4655&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,apparent_temperature_max&timezone=Asia%2FShanghai&start_date=2026-08-03&end_date=2026-08-06');
+  const j=await r.json();const d=j.daily;
+  if(!d||!d.time||d.time.length<1)throw 0;
+  document.getElementById('wxList').innerHTML=d.time.map((t,i)=>wxRow(i,WMAP[d.weather_code[i]]||'⛅',Math.round(d.temperature_2m_max[i]),Math.round(d.temperature_2m_min[i]),d.precipitation_probability_max[i]??'–',Math.round(d.apparent_temperature_max[i]))).join('');
+ }catch(e){wxStatic()}
+}
+/* ---- 初始化 ---- */
+setLang(store.get('sh_lang')||'zh');
+draw(1);pkRender();wxLoad();
+const rv=store.get('sh_ret');if(rv)document.getElementById('retFlight').value=rv;
+const tv=store.get('sh_train');if(tv)document.getElementById('trainInfo').value=tv;
+const hv=store.get('sh_hotel');if(hv)document.getElementById('hotelUrl').value=hv;updHotel();
+</script>
+</body>
+</html>
